@@ -3,3 +3,15 @@ Project/2023_지역_치안_데이터분석/data
 
 *.csv
 *.png
+*.xlxs
+*.twb
+
+Project/2023_지역_치안_데이터분석/__pycache__
+
+*/__pycache__
+
+.DS_Store
+*/.DS_Store
+
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
