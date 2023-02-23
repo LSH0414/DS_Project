@@ -1,0 +1,3441 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0213.1102                               -->
+<workbook original-version='18.1' source-build='2021.4.4 (20214.22.0213.1102)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CascadingFilters />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='광역시도 선택' datatype='real' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+        <calculation class='tableau' formula='0.' />
+        <aliases>
+          <alias key='1.' value='대전광역시' />
+          <alias key='2.' value='충청남도' />
+          <alias key='3.' value='세종특별자치시' />
+        </aliases>
+        <members>
+          <member alias='대전광역시' value='1.' />
+          <member alias='충청남도' value='2.' />
+          <member alias='세종특별자치시' value='3.' />
+          <member value='0.' />
+        </members>
+      </column>
+      <column alias='100m' caption='발생범주' datatype='real' name='[매개 변수 2]' param-domain-type='list' role='measure' type='quantitative' value='1.'>
+        <calculation class='tableau' formula='1.' />
+        <aliases>
+          <alias key='1.' value='100m' />
+          <alias key='2.' value='500m' />
+          <alias key='3.' value='1km' />
+        </aliases>
+        <members>
+          <member alias='100m' value='1.' />
+          <member alias='500m' value='2.' />
+          <member alias='1km' value='3.' />
+        </members>
+      </column>
+      <column alias='(전체)' caption='년도' datatype='real' name='[매개 변수 3]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+        <calculation class='tableau' formula='0.' />
+        <aliases>
+          <alias key='0.' value='(전체)' />
+          <alias key='1.' value='2020' />
+          <alias key='2.' value='2021' />
+          <alias key='3.' value='2022' />
+          <alias key='4.' value='2023' />
+        </aliases>
+        <members>
+          <member alias='(전체)' value='0.' />
+          <member alias='2020' value='1.' />
+          <member alias='2021' value='2.' />
+          <member alias='2022' value='3.' />
+          <member alias='2023' value='4.' />
+        </members>
+      </column>
+      <column alias='(전체)' caption='월' datatype='real' name='[매개 변수 4]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+        <calculation class='tableau' formula='0.' />
+        <aliases>
+          <alias key='0.' value='(전체)' />
+          <alias key='1.' value='1월' />
+          <alias key='2.' value='2월' />
+          <alias key='3.' value='3월' />
+          <alias key='4.' value='4월' />
+          <alias key='5.' value='5월' />
+          <alias key='6.' value='6월' />
+          <alias key='7.' value='7월' />
+          <alias key='8.' value='8월' />
+          <alias key='9.' value='9월' />
+          <alias key='10.' value='10월' />
+          <alias key='12.' value='11월' />
+        </aliases>
+        <members>
+          <member alias='(전체)' value='0.' />
+          <member alias='1월' value='1.' />
+          <member alias='2월' value='2.' />
+          <member alias='3월' value='3.' />
+          <member alias='4월' value='4.' />
+          <member alias='5월' value='5.' />
+          <member alias='6월' value='6.' />
+          <member alias='7월' value='7.' />
+          <member alias='8월' value='8.' />
+          <member alias='9월' value='9.' />
+          <member alias='10월' value='10.' />
+          <member alias='11월' value='12.' />
+          <member alias='12월' value='12.' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='events_cnt_div' inline='true' name='federated.1qfdj811nboom4112mr8p0na5j11' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='events_cnt_div' name='textscan.0dav5dv0rfn81u19msidv0gnhlmd'>
+            <connection class='textscan' directory='/Users/seokholee/popol/Project/2023_지역_치안_안전' filename='events_cnt_div.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0dav5dv0rfn81u19msidv0gnhlmd' name='events_cnt_div.csv' table='[events_cnt_div#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='ko_KR' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='address' ordinal='1' />
+            <column datatype='string' name='name' ordinal='2' />
+            <column datatype='real' name='lat' ordinal='3' />
+            <column datatype='real' name='lng' ordinal='4' />
+            <column datatype='string' name='addr1' ordinal='5' />
+            <column datatype='string' name='addr2' ordinal='6' />
+            <column datatype='integer' name='year' ordinal='7' />
+            <column datatype='integer' name='month' ordinal='8' />
+            <column datatype='integer' name='events_in_100m' ordinal='9' />
+            <column datatype='integer' name='events_in_500m' ordinal='10' />
+            <column datatype='integer' name='events_in_1km' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0dav5dv0rfn81u19msidv0gnhlmd' name='events_cnt_div.csv' table='[events_cnt_div#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='ko_KR' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='address' ordinal='1' />
+            <column datatype='string' name='name' ordinal='2' />
+            <column datatype='real' name='lat' ordinal='3' />
+            <column datatype='real' name='lng' ordinal='4' />
+            <column datatype='string' name='addr1' ordinal='5' />
+            <column datatype='string' name='addr2' ordinal='6' />
+            <column datatype='integer' name='year' ordinal='7' />
+            <column datatype='integer' name='month' ordinal='8' />
+            <column datatype='integer' name='events_in_100m' ordinal='9' />
+            <column datatype='integer' name='events_in_500m' ordinal='10' />
+            <column datatype='integer' name='events_in_1km' ordinal='11' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;ko&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₩&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;ko_KR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[address]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>address</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lat]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>lat</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lng</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lng]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>lng</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>addr1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[addr1]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>addr1</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>addr2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[addr2]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>addr2</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LKO_RKR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>events_in_100m</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[events_in_100m]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>events_in_100m</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>events_in_500m</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[events_in_500m]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>events_in_500m</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>events_in_1km</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[events_in_1km]</local-name>
+            <parent-name>[events_cnt_div.csv]</parent-name>
+            <remote-alias>events_in_1km</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]&quot;' value='100M' />
+          <alias key='&quot;[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]&quot;' value='1KM' />
+          <alias key='&quot;[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]&quot;' value='500M' />
+        </aliases>
+      </column>
+      <column caption='광역시도 선택구분' datatype='boolean' name='[Calculation_2230478146644881408]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [Parameters].[매개 변수 1]&#10;WHEN 1&#10;    THEN [addr1] == &apos;대전&apos;&#10;WHEN 2&#10;    THEN [addr1] == &apos;충남&apos;&#10;WHEN 3&#10;    THEN [addr1] == &apos;세종특별자치시&apos;&#10;WHEN 0&#10;    THEN [addr1] IN (&apos;대전&apos;, &apos;충남&apos;, &apos;세종특별자치시&apos;)&#10;&#10;END' />
+      </column>
+      <column caption='년도 구분' datatype='boolean' name='[Calculation_2230478146646482946]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [Parameters].[매개 변수 3]&#10;&#10;WHEN 1&#10;    THEN [year] == 2020&#10;WHEN 2&#10;    THEN [year] == 2021&#10;WHEN 3&#10;    THEN [year] == 2022&#10;WHEN 4&#10;    THEN [year] == 2023&#10;WHEN 0&#10;    THEN [year] IN (2020,2021,2022,2023)&#10;&#10;END' />
+      </column>
+      <column caption='ranking' datatype='integer' name='[Calculation_2230478146651660292]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INDEX()'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='시도-동읍면' datatype='string' name='[Calculation_2310065196364595203]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [Parameters].[매개 변수 1]&#10;WHEN 1 &#10;    THEN  [addr2]&#10;END' />
+      </column>
+      <column caption='신고 수' datatype='integer' name='[Calculation_2345319937480871937]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([광역시도 선택구분(복사본)_2230478146645524481])' />
+      </column>
+      <column caption='신고 건수' datatype='integer' name='[Calculation_2628624501935271940]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([address])' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='events_cnt_div.csv' datatype='table' name='[__tableau_internal_object_id__].[events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA]' role='measure' type='quantitative' />
+      <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='동/읍/면' datatype='string' name='[addr2]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='주소' datatype='string' name='[address]' role='dimension' type='nominal' />
+      <column caption='100M 이내' datatype='integer' name='[events_in_100m]' role='measure' type='quantitative' />
+      <column caption='1KM 이내' datatype='integer' name='[events_in_1km]' role='measure' type='quantitative' />
+      <column caption='500M 이내' datatype='integer' name='[events_in_500m]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Lng' datatype='real' name='[lng]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Sum' caption='월' datatype='integer' name='[month]' role='dimension' type='ordinal' />
+      <column caption='은행,ATM이름' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='년도' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' caption='발생범주 구분' datatype='integer' name='[광역시도 선택구분(복사본)_2230478146645524481]' role='dimension' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[매개 변수 2]&#10;WHEN 1&#10;    THEN [events_in_100m]&#10;WHEN 2&#10;    THEN ([events_in_500m])&#10;WHEN 3&#10;    THEN ([events_in_1km])&#10;&#10;END' />
+      </column>
+      <column caption='월 구분' datatype='boolean' name='[년도 구분(복사본)_2310065196362186753]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [Parameters].[매개 변수 4]&#10;&#10;WHEN 1&#10;    THEN [month] == 1&#10;WHEN 2&#10;    THEN [month] == 2&#10;WHEN 3&#10;    THEN [month] == 3&#10;WHEN 4&#10;    THEN [month] == 4&#10;WHEN 5&#10;    THEN [month] == 5&#10;WHEN 6&#10;    THEN [month] == 6&#10;WHEN 7&#10;    THEN [month] == 7&#10;WHEN 8&#10;    THEN [month] == 8&#10;WHEN 9&#10;    THEN [month] == 9&#10;WHEN 10&#10;    THEN [month] == 10&#10;WHEN 11&#10;    THEN [month] == 11&#10;WHEN 12&#10;    THEN [month] == 12&#10;WHEN 0&#10;    THEN [month] IN (1,2,3,4,5,6,7,8,9,10,11,12)&#10;&#10;END' />
+      </column>
+      <column caption='시/군/구' datatype='string' name='[주소(복사본)_2628624501931945986]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+        <calculation class='tableau' formula='SPLIT([address], &quot; &quot;, 2)' />
+      </column>
+      <column-instance column='[addr1]' derivation='None' name='[none:addr1:nk]' pivot='key' type='nominal' />
+      <column-instance column='[addr2]' derivation='None' name='[none:addr2:nk]' pivot='key' type='nominal' />
+      <column-instance column='[address]' derivation='None' name='[none:address:nk]' pivot='key' type='nominal' />
+      <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[year]' derivation='None' name='[none:year:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[광역시도 선택구분(복사본)_2230478146645524481]' derivation='None' name='[none:광역시도 선택구분(복사본)_2230478146645524481:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[광역시도 선택구분(복사본)_2230478146645524481]' derivation='None' name='[none:광역시도 선택구분(복사본)_2230478146645524481:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[주소(복사본)_2628624501931945986]' derivation='None' name='[none:주소(복사본)_2628624501931945986:nk]' pivot='key' type='nominal' />
+      <column-instance column='[events_in_100m]' derivation='Sum' name='[sum:events_in_100m:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[events_in_1km]' derivation='Sum' name='[sum:events_in_1km:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[events_in_500m]' derivation='Sum' name='[sum:events_in_500m:qk]' pivot='key' type='quantitative' />
+      <group caption='동작(광역시/도,년도)' hidden='true' name='[Action (광역시/도,년도)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[addr1]' />
+          <groupfilter function='level-members' level='[none:year:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='동작(광역시/도,동/읍/면)' hidden='true' name='[Action (광역시/도,동/읍/면)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[addr1]' />
+          <groupfilter function='level-members' level='[addr2]' />
+        </groupfilter>
+      </group>
+      <group caption='동작(광역시/도,동/읍/면,주소,은행,ATM이름,발생범주 구분)' hidden='true' name='[Action (광역시/도,동/읍/면,주소,은행,ATM이름,발생범주 구분)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[addr1]' />
+          <groupfilter function='level-members' level='[addr2]' />
+          <groupfilter function='level-members' level='[address]' />
+          <groupfilter function='level-members' level='[name]' />
+          <groupfilter function='level-members' level='[광역시도 선택구분(복사본)_2230478146645524481]' />
+        </groupfilter>
+      </group>
+      <group caption='동작(동/읍/면)' hidden='true' name='[Action (동/읍/면)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[addr2]' />
+        </groupfilter>
+      </group>
+      <group hidden='true' name='[제외(광역시/도,동/읍/면,발생범주 구분,은행,ATM이름,주소 2)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:addr1:nk]' />
+          <groupfilter function='level-members' level='[none:addr2:nk]' />
+          <groupfilter function='level-members' level='[none:광역시도 선택구분(복사본)_2230478146645524481:qk]' />
+          <groupfilter function='level-members' level='[none:name:nk]' />
+          <groupfilter function='level-members' level='[none:address:nk]' />
+        </groupfilter>
+      </group>
+      <group hidden='true' name='[제외(광역시/도,동/읍/면,발생범주 구분,은행,ATM이름,주소)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:addr1:nk]' />
+          <groupfilter function='level-members' level='[none:addr2:nk]' />
+          <groupfilter function='level-members' level='[none:광역시도 선택구분(복사본)_2230478146645524481:ok]' />
+          <groupfilter function='level-members' level='[none:name:nk]' />
+          <groupfilter function='level-members' level='[none:address:nk]' />
+        </groupfilter>
+      </group>
+      <drill-paths>
+        <drill-path name='광역시/도, 동/읍/면'>
+          <field>[addr1]</field>
+          <field>[주소(복사본)_2628624501931945986]</field>
+          <field>[addr2]</field>
+        </drill-path>
+      </drill-paths>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:addr2:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;관촉동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;관평동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;남이면&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;도안동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;득산동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;보람동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;부석면&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;성남면&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;신암면&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;안영동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;오류동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;옥룡동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;읍내동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;장대동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;지곡면&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;합덕읍&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;효동&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;가람동&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;가수원동&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;가야곡면&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;금마면&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;덕산면&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;배미동&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;변동&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;서면&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;수청동&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;신봉동&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;염치읍&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;원북면&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;원신흥동&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;전의면&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;정안면&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;추부면&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;탑립동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;가정동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;계룡면&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;금암동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;다정동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;덕명동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;동문동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;법곡동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;석림동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;신당동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;신흥동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;예천동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;은진면&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;은행동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;주산면&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;팔봉면&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;하기동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;광천읍&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;구암동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;내항동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;명천동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;목상동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;북면&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;상서동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;성환읍&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;소정면&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;실옥동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;용계동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;용곡동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;인주면&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;정림동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;채운동&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;화지동&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;광덕면&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;괴정동&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;남일면&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;둔산동&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;등화동&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;부강면&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;부여읍&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;삼성동&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;성동면&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;신창면&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;오정동&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;온천동&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;응봉면&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;장동&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;직산읍&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;해미면&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;흑석동&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;갈마동&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;고대면&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;금학동&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;대평동&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;덕암동&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;두마면&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;병천면&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;부사동&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;석문면&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;신도안면&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;오가면&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;은하면&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;인동&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;주포면&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;풍기동&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;호동&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;규암면&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;대별동&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;대흥동&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;반석동&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;반포면&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;삽교읍&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;송강동&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;수석동&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;연무읍&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;웅천읍&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;원내동&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;장군면&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;정미면&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;천동&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;청수동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;가양동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;갈산면&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;고운동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;금산읍&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;덕지동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;도고면&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;배방읍&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;복수동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;서부면&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;순성면&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;신성동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;영성동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;원성동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;원촌동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;제원면&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;조치원읍&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;취암동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;태평동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;궁촌동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;노은동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;대산읍&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;반월동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;봉산동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;산성동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;성남동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;세천동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;소학동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;송선동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;엄사면&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;연동면&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;용운동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;우성면&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;장존동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;중촌동&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;청라면&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;갑동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;계산동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;고덕면&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;금흥동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;도담동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;도룡동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;두정동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;봉명동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;비래동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;선장면&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;신방동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;어은동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;오룡동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;음봉면&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;죽정동&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;풍세면&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;홍도동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;구룡면&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;궁동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;노성면&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;모종동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;문지동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;불당동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;석교동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;성황동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;쌍용동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;아름동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;용두동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;용화동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;인지면&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;죽동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;채운면&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;구성동&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;낭월동&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;다가동&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;목천읍&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;문창동&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;비인면&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;석봉동&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;소원면&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;안면읍&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;어진동&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;용문동&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;우강면&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;입장면&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;천북면&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;화암동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;권곡동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;대동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;대천동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;미호동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;반죽동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;삼룡동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;소제동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;송악읍&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;업성동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;연서면&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;용전동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;운산면&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;장항읍&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;지족동&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;청소면&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;근흥면&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;대사동&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;대흥면&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;방축동&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;법동&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;상월면&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;송촌동&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;수신면&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;연산면&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;원당동&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;원동&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;전동면&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;정산면&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;청양읍&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;탄방동&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;광석면&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;교촌동&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;남포면&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;마서면&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;만년동&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;부적면&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;삼정동&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;새롬동&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;성연면&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;신평면&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;옥계동&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;외산면&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;의당면&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;전민동&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;진산면&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;홍북읍&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;고북면&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;관저동&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;남면&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;도마동&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;둔포면&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;반곡동&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;봉황동&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;사정동&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;성거읍&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;신부동&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;연축동&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;오천면&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;음암면&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;자양동&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;중동&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;한산면&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;가오동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;강경읍&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;금남면&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;금성동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;대화동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;동대동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;백석동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;서천읍&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;시곡동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;신일동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;영인면&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;월평동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;유구읍&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;종촌동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;좌부동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;초사동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;탕정면&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;판암동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;군북면&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;대덕동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;대정동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;문평동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;문화동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;사직동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;선화동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;송산면&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;안서동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;연기면&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;용산동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;우두동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;잠홍동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;중리동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;청당동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;광시면&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;내동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;대성동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;면천면&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;목동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;부창동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;상대동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;성정동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;소담동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;신흑동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;와동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;요암동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;이인면&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;정동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;차암동&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;홍성읍&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;가장동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;강산동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;금성면&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;나성동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;동면&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;벌곡면&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;복용동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;석남동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;신관동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;신탄진동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;예산읍&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;유량동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;유천동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;주교면&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;집현동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;태안읍&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;평촌동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;한솔동&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:주소(복사본)_2628624501931945986:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;보람동&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;보령시&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;가람동&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;대덕구&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;전의면&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;다정동&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;중구&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;한솔동&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;유성구&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;서천군&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;소정면&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;부강면&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;부여군&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;금산군&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;대평동&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;장군면&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;홍성군&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;계룡시&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;고운동&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;조치원읍&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;연동면&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;청양군&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;논산시&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;도담동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;아름동&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;아산시&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;어진동&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;예산군&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;연서면&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;태안군&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;전동면&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;새롬동&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;서구&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;당진시&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;반곡동&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;금남면&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;동구&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;종촌동&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;연기면&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;천안시&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;서산시&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;소담동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;공주시&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;나성동&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;집현동&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;대한민국&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='광역시도 선택' datatype='real' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+          <calculation class='tableau' formula='0.' />
+          <aliases>
+            <alias key='1.' value='대전광역시' />
+            <alias key='2.' value='충청남도' />
+            <alias key='3.' value='세종특별자치시' />
+          </aliases>
+        </column>
+        <column alias='100m' caption='발생범주' datatype='real' name='[매개 변수 2]' param-domain-type='list' role='measure' type='quantitative' value='1.'>
+          <calculation class='tableau' formula='1.' />
+          <aliases>
+            <alias key='1.' value='100m' />
+            <alias key='2.' value='500m' />
+            <alias key='3.' value='1km' />
+          </aliases>
+        </column>
+        <column alias='(전체)' caption='년도' datatype='real' name='[매개 변수 3]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+          <calculation class='tableau' formula='0.' />
+          <aliases>
+            <alias key='0.' value='(전체)' />
+            <alias key='1.' value='2020' />
+            <alias key='2.' value='2021' />
+            <alias key='3.' value='2022' />
+            <alias key='4.' value='2023' />
+          </aliases>
+        </column>
+        <column alias='(전체)' caption='월' datatype='real' name='[매개 변수 4]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+          <calculation class='tableau' formula='0.' />
+          <aliases>
+            <alias key='0.' value='(전체)' />
+            <alias key='1.' value='1월' />
+            <alias key='2.' value='2월' />
+            <alias key='3.' value='3월' />
+            <alias key='4.' value='4월' />
+            <alias key='5.' value='5월' />
+            <alias key='6.' value='6월' />
+            <alias key='7.' value='7월' />
+            <alias key='8.' value='8월' />
+            <alias key='9.' value='9월' />
+            <alias key='10.' value='10월' />
+            <alias key='12.' value='11월' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='events_cnt_div.csv' id='events_cnt_div.csv_EF51C62611674972AC02D3DD58A2DEBA'>
+            <properties context=''>
+              <relation connection='textscan.0dav5dv0rfn81u19msidv0gnhlmd' name='events_cnt_div.csv' table='[events_cnt_div#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='ko_KR' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='address' ordinal='1' />
+                  <column datatype='string' name='name' ordinal='2' />
+                  <column datatype='real' name='lat' ordinal='3' />
+                  <column datatype='real' name='lng' ordinal='4' />
+                  <column datatype='string' name='addr1' ordinal='5' />
+                  <column datatype='string' name='addr2' ordinal='6' />
+                  <column datatype='integer' name='year' ordinal='7' />
+                  <column datatype='integer' name='month' ordinal='8' />
+                  <column datatype='integer' name='events_in_100m' ordinal='9' />
+                  <column datatype='integer' name='events_in_500m' ordinal='10' />
+                  <column datatype='integer' name='events_in_1km' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='필터1' name='[Action1_0C658E8AEEE34FAAB7771D74C4FA1C03]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='대시보드 1' type='sheet' worksheet='년도별 신고수' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='년도별 신고수' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='대시보드 1' />
+      </command>
+    </action>
+    <action caption='필터3' name='[Action3_21CC37F33B204EB5B4AD8774F0BE0CFD]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='대시보드 1' type='sheet' worksheet='Top10' />
+      <link caption='필터3' delimiter=',' escape='\' expression='tsl:%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C%201?%5Bfederated.1qfdj811nboom4112mr8p0na5j11%5D.%5Baddr2%5D~s0=&lt;[federated.1qfdj811nboom4112mr8p0na5j11].[addr2]~na&gt;' include-null='true' multi-select='true' url-escape='true' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='년도별 신고수,Top10' />
+        <param name='target' value='대시보드 1' />
+      </command>
+    </action>
+    <datasources>
+      <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+    </datasources>
+    <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+      <column caption='동/읍/면' datatype='string' name='[addr2]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+    </datasource-dependencies>
+  </actions>
+  <worksheets>
+    <worksheet name='Top10'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='광역시도 선택' datatype='real' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+              <calculation class='tableau' formula='0.' />
+              <aliases>
+                <alias key='1.' value='대전광역시' />
+                <alias key='2.' value='충청남도' />
+                <alias key='3.' value='세종특별자치시' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+            <column caption='광역시도 선택구분' datatype='boolean' name='[Calculation_2230478146644881408]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 1]&#10;WHEN 1&#10;    THEN [addr1] == &apos;대전&apos;&#10;WHEN 2&#10;    THEN [addr1] == &apos;충남&apos;&#10;WHEN 3&#10;    THEN [addr1] == &apos;세종특별자치시&apos;&#10;WHEN 0&#10;    THEN [addr1] IN (&apos;대전&apos;, &apos;충남&apos;, &apos;세종특별자치시&apos;)&#10;&#10;END' />
+            </column>
+            <column caption='ranking' datatype='integer' name='[Calculation_2230478146651660292]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='동/읍/면' datatype='string' name='[addr2]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='100M 이내' datatype='integer' name='[events_in_100m]' role='measure' type='quantitative' />
+            <column caption='1KM 이내' datatype='integer' name='[events_in_1km]' role='measure' type='quantitative' />
+            <column caption='500M 이내' datatype='integer' name='[events_in_500m]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2230478146644881408]' derivation='None' name='[none:Calculation_2230478146644881408:nk]' pivot='key' type='nominal' />
+            <column-instance column='[addr2]' derivation='None' name='[none:addr2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[events_in_100m]' derivation='Sum' name='[sum:events_in_100m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_1km]' derivation='Sum' name='[sum:events_in_1km:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_500m]' derivation='Sum' name='[sum:events_in_500m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2230478146651660292]' derivation='User' name='[usr:Calculation_2230478146651660292:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column caption='년도' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[Action (광역시/도,년도)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_0C658E8AEEE34FAAB7771D74C4FA1C03]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[addr1]' member='&quot;세종특별자치시&quot;' />
+              <groupfilter function='member' level='[none:year:ok]' member='2020' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2230478146644881408:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>10</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr2:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[Action (광역시/도,년도)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr2:nk]' value='29' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr2:nk]</rows>
+        <cols>([federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk] + ([federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk] + [federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]))</cols>
+      </table>
+      <simple-id uuid='{E9351EB6-2F64-4F42-BE30-EF2C73AC0144}' />
+    </worksheet>
+    <worksheet name='년도별 신고수'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>년도별 신고 수&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='광역시도 선택' datatype='real' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+              <calculation class='tableau' formula='0.' />
+              <aliases>
+                <alias key='1.' value='대전광역시' />
+                <alias key='2.' value='충청남도' />
+                <alias key='3.' value='세종특별자치시' />
+              </aliases>
+            </column>
+            <column alias='100m' caption='발생범주' datatype='real' name='[매개 변수 2]' param-domain-type='list' role='measure' type='quantitative' value='1.'>
+              <calculation class='tableau' formula='1.' />
+              <aliases>
+                <alias key='1.' value='100m' />
+                <alias key='2.' value='500m' />
+                <alias key='3.' value='1km' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+            <column caption='광역시도 선택구분' datatype='boolean' name='[Calculation_2230478146644881408]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 1]&#10;WHEN 1&#10;    THEN [addr1] == &apos;대전&apos;&#10;WHEN 2&#10;    THEN [addr1] == &apos;충남&apos;&#10;WHEN 3&#10;    THEN [addr1] == &apos;세종특별자치시&apos;&#10;WHEN 0&#10;    THEN [addr1] IN (&apos;대전&apos;, &apos;충남&apos;, &apos;세종특별자치시&apos;)&#10;&#10;END' />
+            </column>
+            <column caption='신고 수' datatype='integer' name='[Calculation_2345319937480871937]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([광역시도 선택구분(복사본)_2230478146645524481])' />
+            </column>
+            <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='100M 이내' datatype='integer' name='[events_in_100m]' role='measure' type='quantitative' />
+            <column caption='1KM 이내' datatype='integer' name='[events_in_1km]' role='measure' type='quantitative' />
+            <column caption='500M 이내' datatype='integer' name='[events_in_500m]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2230478146644881408]' derivation='None' name='[none:Calculation_2230478146644881408:nk]' pivot='key' type='nominal' />
+            <column-instance column='[addr1]' derivation='None' name='[none:addr1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_2345319937480871937]' derivation='User' name='[usr:Calculation_2345319937480871937:qk]' pivot='key' type='quantitative' />
+            <column caption='년도' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+            <column aggregation='Sum' caption='발생범주 구분' datatype='integer' name='[광역시도 선택구분(복사본)_2230478146645524481]' role='dimension' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 2]&#10;WHEN 1&#10;    THEN [events_in_100m]&#10;WHEN 2&#10;    THEN ([events_in_500m])&#10;WHEN 3&#10;    THEN ([events_in_1km])&#10;&#10;END' />
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2230478146644881408:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]' value='48' />
+            <format attr='height' field='[federated.1qfdj811nboom4112mr8p0na5j11].[none:year:ok]' value='28' />
+            <format attr='background-color' scope='rows' value='#e2e6f0' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='background-color' data-class='total' scope='rows' value='#00000000' />
+            <format attr='background-color' data-class='subtotal' scope='rows' value='#00000000' />
+            <format attr='border-color' scope='cols' value='#c0c0c0' />
+            <format attr='background-color' scope='cols' value='#e9edf5' />
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' scope='cols' value='#00000000' />
+            <format attr='band-color' scope='cols' value='#00000000' />
+            <format attr='band-color' scope='rows' value='#f2f6f7' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='cols' value='1' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2345319937480871937:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk] / [federated.1qfdj811nboom4112mr8p0na5j11].[none:year:ok])</cols>
+      </table>
+      <simple-id uuid='{C1FD5B65-C98A-4036-890D-A37A6D319B2E}' />
+    </worksheet>
+    <worksheet name='대전'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;</run>
+            <run>[Parameters].[매개 변수 1]</run>
+            <run>&gt;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='광역시도 선택' datatype='real' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+              <calculation class='tableau' formula='0.' />
+              <aliases>
+                <alias key='1.' value='대전광역시' />
+                <alias key='2.' value='충청남도' />
+                <alias key='3.' value='세종특별자치시' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+            <column caption='광역시도 선택구분' datatype='boolean' name='[Calculation_2230478146644881408]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 1]&#10;WHEN 1&#10;    THEN [addr1] == &apos;대전&apos;&#10;WHEN 2&#10;    THEN [addr1] == &apos;충남&apos;&#10;WHEN 3&#10;    THEN [addr1] == &apos;세종특별자치시&apos;&#10;WHEN 0&#10;    THEN [addr1] IN (&apos;대전&apos;, &apos;충남&apos;, &apos;세종특별자치시&apos;)&#10;&#10;END' />
+            </column>
+            <column caption='신고 건수' datatype='integer' name='[Calculation_2628624501935271940]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([address])' />
+            </column>
+            <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='주소' datatype='string' name='[address]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2230478146644881408]' derivation='None' name='[none:Calculation_2230478146644881408:nk]' pivot='key' type='nominal' />
+            <column-instance column='[addr1]' derivation='None' name='[none:addr1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[주소(복사본)_2628624501931945986]' derivation='None' name='[none:주소(복사본)_2628624501931945986:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2628624501935271940]' derivation='User' name='[usr:Calculation_2628624501935271940:qk]' pivot='key' type='quantitative' />
+            <column caption='시/군/구' datatype='string' name='[주소(복사본)_2628624501931945986]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <calculation class='tableau' formula='SPLIT([address], &quot; &quot;, 2)' />
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2230478146644881408:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1qfdj811nboom4112mr8p0na5j11].[none:주소(복사본)_2628624501931945986:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2628624501935271940:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2628624501935271940:qk]' value='64' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1qfdj811nboom4112mr8p0na5j11].[none:주소(복사본)_2628624501931945986:nk]' value='59' />
+            <format attr='vertical-align' value='auto' />
+            <format attr='vertical-align' field='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2628624501935271940:qk]' value='auto' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='vertical-align' scope='cols' value='center' />
+            <format attr='text-align' scope='cols' value='center' />
+            <format attr='text-orientation' scope='rows' value='0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2628624501935271940:qk]' />
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2628624501935271940:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-range-min' value='false' />
+                <format attr='mark-labels-range-max' value='false' />
+                <format attr='mark-labels-range-scope' value='cell' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2628624501935271940:qk]</rows>
+        <cols>([federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk] / [federated.1qfdj811nboom4112mr8p0na5j11].[none:주소(복사본)_2628624501931945986:nk])</cols>
+      </table>
+      <simple-id uuid='{6D93EB29-9BB2-41BD-8DDA-15E361ABA6C9}' />
+    </worksheet>
+    <worksheet name='맵'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='광역시도 선택' datatype='real' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+              <calculation class='tableau' formula='0.' />
+              <aliases>
+                <alias key='1.' value='대전광역시' />
+                <alias key='2.' value='충청남도' />
+                <alias key='3.' value='세종특별자치시' />
+              </aliases>
+            </column>
+            <column alias='100m' caption='발생범주' datatype='real' name='[매개 변수 2]' param-domain-type='list' role='measure' type='quantitative' value='1.'>
+              <calculation class='tableau' formula='1.' />
+              <aliases>
+                <alias key='1.' value='100m' />
+                <alias key='2.' value='500m' />
+                <alias key='3.' value='1km' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+            <column caption='광역시도 선택구분' datatype='boolean' name='[Calculation_2230478146644881408]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 1]&#10;WHEN 1&#10;    THEN [addr1] == &apos;대전&apos;&#10;WHEN 2&#10;    THEN [addr1] == &apos;충남&apos;&#10;WHEN 3&#10;    THEN [addr1] == &apos;세종특별자치시&apos;&#10;WHEN 0&#10;    THEN [addr1] IN (&apos;대전&apos;, &apos;충남&apos;, &apos;세종특별자치시&apos;)&#10;&#10;END' />
+            </column>
+            <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='동/읍/면' datatype='string' name='[addr2]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='주소' datatype='string' name='[address]' role='dimension' type='nominal' />
+            <column-instance column='[lat]' derivation='Avg' name='[avg:lat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[lng]' derivation='Avg' name='[avg:lng:qk]' pivot='key' type='quantitative' />
+            <column caption='100M 이내' datatype='integer' name='[events_in_100m]' role='measure' type='quantitative' />
+            <column caption='1KM 이내' datatype='integer' name='[events_in_1km]' role='measure' type='quantitative' />
+            <column caption='500M 이내' datatype='integer' name='[events_in_500m]' role='measure' type='quantitative' />
+            <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Lng' datatype='real' name='[lng]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='은행,ATM이름' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2230478146644881408]' derivation='None' name='[none:Calculation_2230478146644881408:nk]' pivot='key' type='nominal' />
+            <column-instance column='[addr1]' derivation='None' name='[none:addr1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[addr2]' derivation='None' name='[none:addr2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[address]' derivation='None' name='[none:address:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[광역시도 선택구분(복사본)_2230478146645524481]' derivation='None' name='[none:광역시도 선택구분(복사본)_2230478146645524481:qk]' pivot='key' type='quantitative' />
+            <column caption='년도' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+            <column aggregation='Sum' caption='발생범주 구분' datatype='integer' name='[광역시도 선택구분(복사본)_2230478146645524481]' role='dimension' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 2]&#10;WHEN 1&#10;    THEN [events_in_100m]&#10;WHEN 2&#10;    THEN ([events_in_500m])&#10;WHEN 3&#10;    THEN ([events_in_1km])&#10;&#10;END' />
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[Action (광역시/도,년도)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_0C658E8AEEE34FAAB7771D74C4FA1C03]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[addr1]' member='&quot;세종특별자치시&quot;' />
+              <groupfilter function='member' level='[none:year:ok]' member='2020' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[Action (동/읍/면)]'>
+            <groupfilter function='member' level='[addr2]' member='&quot;조치원읍&quot;' user:ui-action-filter='[Action3_21CC37F33B204EB5B4AD8774F0BE0CFD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2230478146644881408:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:광역시도 선택구분(복사본)_2230478146645524481:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>20</max>
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[제외(광역시/도,동/읍/면,발생범주 구분,은행,ATM이름,주소 2)]'>
+            <groupfilter function='crossjoin' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:addr1:nk]' />
+              <groupfilter function='level-members' level='[none:addr2:nk]' />
+              <groupfilter function='level-members' level='[none:광역시도 선택구분(복사본)_2230478146645524481:qk]' />
+              <groupfilter function='level-members' level='[none:name:nk]' />
+              <groupfilter function='level-members' level='[none:address:nk]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[제외(광역시/도,동/읍/면,발생범주 구분,은행,ATM이름,주소 2)]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[Action (광역시/도,년도)]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[Action (동/읍/면)]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:광역시도 선택구분(복사본)_2230478146645524481:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr2:nk]' />
+              <size column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:광역시도 선택구분(복사본)_2230478146645524481:qk]' />
+              <lod column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]' />
+              <lod column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr2:nk]' />
+              <lod column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:address:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-range-min' value='false' />
+                <format attr='mark-labels-range-max' value='false' />
+                <format attr='mark-labels-range-scope' value='cell' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='0.91154694557189941' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1qfdj811nboom4112mr8p0na5j11].[avg:lat:qk]</rows>
+        <cols>[federated.1qfdj811nboom4112mr8p0na5j11].[avg:lng:qk]</cols>
+      </table>
+      <simple-id uuid='{FE105BDA-04D0-4D74-9B51-7C8EB6966A11}' />
+    </worksheet>
+    <worksheet name='맵-표'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='광역시도 선택' datatype='real' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+              <calculation class='tableau' formula='0.' />
+              <aliases>
+                <alias key='1.' value='대전광역시' />
+                <alias key='2.' value='충청남도' />
+                <alias key='3.' value='세종특별자치시' />
+              </aliases>
+            </column>
+            <column alias='100m' caption='발생범주' datatype='real' name='[매개 변수 2]' param-domain-type='list' role='measure' type='quantitative' value='1.'>
+              <calculation class='tableau' formula='1.' />
+              <aliases>
+                <alias key='1.' value='100m' />
+                <alias key='2.' value='500m' />
+                <alias key='3.' value='1km' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+            <column caption='광역시도 선택구분' datatype='boolean' name='[Calculation_2230478146644881408]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 1]&#10;WHEN 1&#10;    THEN [addr1] == &apos;대전&apos;&#10;WHEN 2&#10;    THEN [addr1] == &apos;충남&apos;&#10;WHEN 3&#10;    THEN [addr1] == &apos;세종특별자치시&apos;&#10;WHEN 0&#10;    THEN [addr1] IN (&apos;대전&apos;, &apos;충남&apos;, &apos;세종특별자치시&apos;)&#10;&#10;END' />
+            </column>
+            <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='동/읍/면' datatype='string' name='[addr2]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='주소' datatype='string' name='[address]' role='dimension' type='nominal' />
+            <column caption='100M 이내' datatype='integer' name='[events_in_100m]' role='measure' type='quantitative' />
+            <column caption='1KM 이내' datatype='integer' name='[events_in_1km]' role='measure' type='quantitative' />
+            <column caption='500M 이내' datatype='integer' name='[events_in_500m]' role='measure' type='quantitative' />
+            <column caption='은행,ATM이름' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2230478146644881408]' derivation='None' name='[none:Calculation_2230478146644881408:nk]' pivot='key' type='nominal' />
+            <column-instance column='[addr1]' derivation='None' name='[none:addr1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[addr2]' derivation='None' name='[none:addr2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[address]' derivation='None' name='[none:address:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[광역시도 선택구분(복사본)_2230478146645524481]' derivation='None' name='[none:광역시도 선택구분(복사본)_2230478146645524481:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_100m]' derivation='Sum' name='[sum:events_in_100m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_1km]' derivation='Sum' name='[sum:events_in_1km:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_500m]' derivation='Sum' name='[sum:events_in_500m:qk]' pivot='key' type='quantitative' />
+            <column caption='년도' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+            <column aggregation='Sum' caption='발생범주 구분' datatype='integer' name='[광역시도 선택구분(복사본)_2230478146645524481]' role='dimension' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 2]&#10;WHEN 1&#10;    THEN [events_in_100m]&#10;WHEN 2&#10;    THEN ([events_in_500m])&#10;WHEN 3&#10;    THEN ([events_in_1km])&#10;&#10;END' />
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[Action (광역시/도,년도)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_0C658E8AEEE34FAAB7771D74C4FA1C03]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[addr1]' />
+              <groupfilter function='level-members' level='[none:year:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[Action (동/읍/면)]'>
+            <groupfilter function='level-members' level='[addr2]' user:ui-action-filter='[Action3_21CC37F33B204EB5B4AD8774F0BE0CFD]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2230478146644881408:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[제외(광역시/도,동/읍/면,발생범주 구분,은행,ATM이름,주소 2)]'>
+            <groupfilter function='crossjoin' user:ui-enumeration='all' user:ui-exclude='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:addr1:nk]' />
+              <groupfilter function='level-members' level='[none:addr2:nk]' />
+              <groupfilter function='level-members' level='[none:광역시도 선택구분(복사본)_2230478146645524481:qk]' />
+              <groupfilter function='level-members' level='[none:name:nk]' />
+              <groupfilter function='level-members' level='[none:address:nk]' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr2:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[제외(광역시/도,동/읍/면,발생범주 구분,은행,ATM이름,주소 2)]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[Action (광역시/도,년도)]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[Action (동/읍/면)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-range-min' value='false' />
+                <format attr='mark-labels-range-max' value='false' />
+                <format attr='mark-labels-range-scope' value='cell' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' />
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-range-min' value='false' />
+                <format attr='mark-labels-range-max' value='false' />
+                <format attr='mark-labels-range-scope' value='cell' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' />
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-range-min' value='false' />
+                <format attr='mark-labels-range-max' value='false' />
+                <format attr='mark-labels-range-scope' value='cell' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' />
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-range-min' value='false' />
+                <format attr='mark-labels-range-max' value='false' />
+                <format attr='mark-labels-range-scope' value='cell' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk] / [federated.1qfdj811nboom4112mr8p0na5j11].[none:addr2:nk])</rows>
+        <cols>([federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk] + ([federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk] + [federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]))</cols>
+      </table>
+      <simple-id uuid='{715DA518-E4AB-40E4-8132-F21E3458D04C}' />
+    </worksheet>
+    <worksheet name='시트 8'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+            <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='주소' datatype='string' name='[address]' role='dimension' type='nominal' />
+            <column-instance column='[addr1]' derivation='None' name='[none:addr1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[주소(복사본)_2628624501931945986]' derivation='None' name='[none:주소(복사본)_2628624501931945986:nk]' pivot='key' type='nominal' />
+            <column caption='시/군/구' datatype='string' name='[주소(복사본)_2628624501931945986]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <calculation class='tableau' formula='SPLIT([address], &quot; &quot;, 2)' />
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:addr1:nk]' member='&quot;대전&quot;' />
+              <groupfilter function='member' level='[none:addr1:nk]' member='&quot;세종특별자치시&quot;' />
+              <groupfilter function='member' level='[none:addr1:nk]' member='&quot;충남&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-align' scope='cols' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:주소(복사본)_2628624501931945986:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]</cols>
+      </table>
+      <simple-id uuid='{9C11CBC5-89BD-4F03-934F-B1D0B2C5861F}' />
+    </worksheet>
+    <worksheet name='시트 9'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+            <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='100M 이내' datatype='integer' name='[events_in_100m]' role='measure' type='quantitative' />
+            <column caption='1KM 이내' datatype='integer' name='[events_in_1km]' role='measure' type='quantitative' />
+            <column caption='500M 이내' datatype='integer' name='[events_in_500m]' role='measure' type='quantitative' />
+            <column-instance column='[addr1]' derivation='None' name='[none:addr1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[events_in_100m]' derivation='Sum' name='[sum:events_in_100m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_1km]' derivation='Sum' name='[sum:events_in_1km:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_500m]' derivation='Sum' name='[sum:events_in_500m:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1qfdj811nboom4112mr8p0na5j11].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:addr1:nk]' member='&quot;대전&quot;' />
+              <groupfilter function='member' level='[none:addr1:nk]' member='&quot;세종특별자치시&quot;' />
+              <groupfilter function='member' level='[none:addr1:nk]' member='&quot;충남&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;대전&quot;</bucket>
+              <bucket>&quot;충남&quot;</bucket>
+              <bucket>&quot;세종특별자치시&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]' value='102' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1qfdj811nboom4112mr8p0na5j11].[:Measure Names]</rows>
+        <cols>[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]</cols>
+      </table>
+      <simple-id uuid='{51B528E4-9508-4A12-85BB-D9399A7BFED4}' />
+    </worksheet>
+    <worksheet name='월별 최대 신고수'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;</run>
+            <run>[federated.1qfdj811nboom4112mr8p0na5j11].[addr2]</run>
+            <run>&gt; 신고가 많은 장소</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+            <column caption='ranking' datatype='integer' name='[Calculation_2230478146651660292]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='동/읍/면' datatype='string' name='[addr2]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='100M 이내' datatype='integer' name='[events_in_100m]' role='measure' type='quantitative' />
+            <column caption='1KM 이내' datatype='integer' name='[events_in_1km]' role='measure' type='quantitative' />
+            <column caption='500M 이내' datatype='integer' name='[events_in_500m]' role='measure' type='quantitative' />
+            <column caption='은행,ATM이름' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[addr1]' derivation='None' name='[none:addr1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[events_in_100m]' derivation='Sum' name='[sum:events_in_100m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_1km]' derivation='Sum' name='[sum:events_in_1km:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_500m]' derivation='Sum' name='[sum:events_in_500m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2230478146651660292]' derivation='User' name='[usr:Calculation_2230478146651660292:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column caption='년도' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[Action (광역시/도,년도)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_0C658E8AEEE34FAAB7771D74C4FA1C03]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[addr1]' member='&quot;세종특별자치시&quot;' />
+              <groupfilter function='member' level='[none:year:ok]' member='2020' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[Action (동/읍/면)]'>
+            <groupfilter function='member' level='[addr2]' member='&quot;조치원읍&quot;' user:ui-action-filter='[Action3_21CC37F33B204EB5B4AD8774F0BE0CFD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]'>
+            <groupfilter function='level-members' level='[none:addr1:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk:1]' included-values='in-range'>
+            <min>1</min>
+            <max>10</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1qfdj811nboom4112mr8p0na5j11].[none:name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[Action (광역시/도,년도)]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[Action (동/읍/면)]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk:1]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' />
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' />
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' />
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk] + ([federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk] + [federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]))</rows>
+        <cols>[federated.1qfdj811nboom4112mr8p0na5j11].[none:name:nk]</cols>
+      </table>
+      <simple-id uuid='{3752C0DF-B7A5-4ABC-A20D-56D19853FE3C}' />
+    </worksheet>
+    <worksheet name='월별 최대 신고수 (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;</run>
+            <run>[federated.1qfdj811nboom4112mr8p0na5j11].[addr2]</run>
+            <run>&gt; 월별 신고수</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+            <column caption='ranking' datatype='integer' name='[Calculation_2230478146651660292]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='동/읍/면' datatype='string' name='[addr2]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='100M 이내' datatype='integer' name='[events_in_100m]' role='measure' type='quantitative' />
+            <column caption='1KM 이내' datatype='integer' name='[events_in_1km]' role='measure' type='quantitative' />
+            <column caption='500M 이내' datatype='integer' name='[events_in_500m]' role='measure' type='quantitative' />
+            <column caption='은행,ATM이름' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[addr1]' derivation='None' name='[none:addr1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[events_in_100m]' derivation='Sum' name='[sum:events_in_100m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_1km]' derivation='Sum' name='[sum:events_in_1km:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[events_in_500m]' derivation='Sum' name='[sum:events_in_500m:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2230478146651660292]' derivation='User' name='[usr:Calculation_2230478146651660292:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+            <column caption='년도' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[Action (광역시/도,년도)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_0C658E8AEEE34FAAB7771D74C4FA1C03]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[addr1]' member='&quot;세종특별자치시&quot;' />
+              <groupfilter function='member' level='[none:year:ok]' member='2020' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[Action (동/읍/면)]'>
+            <groupfilter function='member' level='[addr2]' member='&quot;조치원읍&quot;' user:ui-action-filter='[Action3_21CC37F33B204EB5B4AD8774F0BE0CFD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]'>
+            <groupfilter function='level-members' level='[none:addr1:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk:1]' included-values='in-range'>
+            <min>1</min>
+            <max>10</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1qfdj811nboom4112mr8p0na5j11].[none:name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[Action (광역시/도,년도)]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[Action (동/읍/면)]</column>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk:1]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' />
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' />
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' />
+              <text column='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk] + ([federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk] + [federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]))</rows>
+        <cols>[federated.1qfdj811nboom4112mr8p0na5j11].[none:name:nk]</cols>
+      </table>
+      <simple-id uuid='{2C4A199A-863A-498F-9F65-3AC7D830D028}' />
+    </worksheet>
+    <worksheet name='충남'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;</run>
+            <run>[Parameters].[매개 변수 1]</run>
+            <run>&gt;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+            <datasource caption='매개 변수' name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='광역시도 선택' datatype='real' name='[매개 변수 1]' param-domain-type='list' role='measure' type='quantitative' value='0.'>
+              <calculation class='tableau' formula='0.' />
+              <aliases>
+                <alias key='1.' value='대전광역시' />
+                <alias key='2.' value='충청남도' />
+                <alias key='3.' value='세종특별자치시' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+            <column caption='광역시도 선택구분' datatype='boolean' name='[Calculation_2230478146644881408]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='CASE [Parameters].[매개 변수 1]&#10;WHEN 1&#10;    THEN [addr1] == &apos;대전&apos;&#10;WHEN 2&#10;    THEN [addr1] == &apos;충남&apos;&#10;WHEN 3&#10;    THEN [addr1] == &apos;세종특별자치시&apos;&#10;WHEN 0&#10;    THEN [addr1] IN (&apos;대전&apos;, &apos;충남&apos;, &apos;세종특별자치시&apos;)&#10;&#10;END' />
+            </column>
+            <column caption='광역시/도' datatype='string' name='[addr1]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='동/읍/면' datatype='string' name='[addr2]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='주소' datatype='string' name='[address]' role='dimension' type='nominal' />
+            <column-instance column='[lat]' derivation='Avg' name='[avg:lat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[lng]' derivation='Avg' name='[avg:lng:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Lng' datatype='real' name='[lng]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[Calculation_2230478146644881408]' derivation='None' name='[none:Calculation_2230478146644881408:nk]' pivot='key' type='nominal' />
+            <column-instance column='[addr1]' derivation='None' name='[none:addr1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[addr2]' derivation='None' name='[none:addr2:nk]' pivot='key' type='nominal' />
+            <column-instance column='[address]' derivation='None' name='[none:address:nk]' pivot='key' type='nominal' />
+            <column-instance column='[주소(복사본)_2628624501931945986]' derivation='None' name='[none:주소(복사본)_2628624501931945986:nk]' pivot='key' type='nominal' />
+            <column caption='시/군/구' datatype='string' name='[주소(복사본)_2628624501931945986]' role='dimension' semantic-role='[County].[Name]' type='nominal'>
+              <calculation class='tableau' formula='SPLIT([address], &quot; &quot;, 2)' />
+            </column>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]'>
+            <groupfilter function='member' level='[none:Calculation_2230478146644881408:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1qfdj811nboom4112mr8p0na5j11].[none:Calculation_2230478146644881408:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:주소(복사본)_2628624501931945986:nk]' />
+              <lod column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]' />
+              <lod column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr2:nk]' />
+              <lod column='[federated.1qfdj811nboom4112mr8p0na5j11].[none:address:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-range-min' value='false' />
+                <format attr='mark-labels-range-max' value='false' />
+                <format attr='mark-labels-range-scope' value='cell' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1qfdj811nboom4112mr8p0na5j11].[avg:lat:qk]</rows>
+        <cols>[federated.1qfdj811nboom4112mr8p0na5j11].[avg:lng:qk]</cols>
+      </table>
+      <simple-id uuid='{25E91F35-66B9-4B7A-A244-82D26D604D0D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='대시보드 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='events_cnt_div' name='federated.1qfdj811nboom4112mr8p0na5j11' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1qfdj811nboom4112mr8p0na5j11'>
+        <column caption='ranking' datatype='integer' name='[Calculation_2230478146651660292]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='INDEX()'>
+            <table-calc ordering-type='Rows' />
+          </calculation>
+        </column>
+        <column-instance column='[Calculation_2230478146651660292]' derivation='User' name='[usr:Calculation_2230478146651660292:qk:1]' pivot='key' type='quantitative'>
+          <table-calc ordering-type='Rows' />
+        </column-instance>
+        <column-instance column='[Calculation_2230478146651660292]' derivation='User' name='[usr:Calculation_2230478146651660292:qk]' pivot='key' type='quantitative'>
+          <table-calc ordering-type='Columns' />
+        </column-instance>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97880' id='51' param='horz' type-v2='layout-flow' w='98698' x='651' y='1060'>
+            <zone h='97880' id='33' param='horz' type-v2='layout-flow' w='85679' x='651' y='1060'>
+              <zone h='97880' id='31' type-v2='layout-basic' w='85679' x='651' y='1060'>
+                <zone h='78146' id='13' param='horz' type-v2='layout-flow' w='42028' x='44302' y='20794'>
+                  <zone h='78146' id='11' type-v2='layout-basic' w='42028' x='44302' y='20794'>
+                    <zone h='78146' id='22' name='Top10' w='42028' x='44302' y='20794'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+                <zone h='19734' id='28' name='년도별 신고수' show-title='false' w='85679' x='651' y='1060'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='37022' id='9' name='맵' show-title='false' w='43651' x='651' y='61918'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='41124' id='23' name='월별 최대 신고수' w='43651' x='651' y='20794'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97880' id='50' is-fixed='true' param='vert' type-v2='layout-flow' w='13019' x='86330' y='1060' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='7947' id='34' name='Top10' param='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk]' type-v2='filter' values='database' w='13670' x='84947' y='20397' />
+        <zone h='6093' id='35' is-centered='0' is-scaled='1' param='/Users/seokholee/Desktop/svgtopng/충남.png' type-v2='bitmap' w='5533' x='84133' y='1854' />
+        <zone h='5828' id='36' is-centered='0' is-scaled='1' param='/Users/seokholee/Downloads/대전.png' type-v2='bitmap' w='3906' x='19040' y='1722' />
+        <zone h='6093' id='37' is-centered='0' is-scaled='1' param='/Users/seokholee/Downloads/세종.png' type-v2='bitmap' w='6998' x='53051' y='1722' />
+        <zone h='12715' id='52' name='월별 최대 신고수' param='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk:1]' type-v2='filter' values='database' w='13670' x='84296' y='4371' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='49' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97880' id='48' param='vert' type-v2='layout-flow' w='98698' x='651' y='1060'>
+                <zone fixed-size='183' h='23840' id='28' is-fixed='true' name='년도별 신고수' show-title='false' w='98698' x='651' y='1060'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='46' h='5828' id='36' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/seokholee/Downloads/대전.png' type-v2='bitmap' w='3906' x='25305' y='1457'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='48' h='6093' id='37' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/seokholee/Downloads/세종.png' type-v2='bitmap' w='6998' x='56469' y='1589'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='49' h='6093' id='35' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/seokholee/Desktop/svgtopng/충남.png' type-v2='bitmap' w='5533' x='86493' y='1722'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37019' id='23' is-fixed='true' name='월별 최대 신고수' w='47598' x='651' y='24900'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7947' id='34' name='Top10' param='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk]' type-v2='filter' values='database' w='13670' x='84703' y='25430'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='74040' id='22' is-fixed='true' name='Top10' w='51100' x='48249' y='24900'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37021' id='9' is-fixed='true' name='맵' show-title='false' w='47598' x='651' y='61919'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{CD84DD76-A130-4D95-B0C9-0238A3922DFC}' />
+    </dashboard>
+    <dashboard name='스토리 1' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3527' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4357' />
+            <zone h='84336' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='14834'>
+              <flipboard active-id='2' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='맵' id='2'>
+                    <currentDeltas>
+                      <worksheet name='맵'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1qfdj811nboom4112mr8p0na5j11].[avg:lat:qk]' field-type='quantitative' max='4415236.3754980881' min='4409385.4127185978' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1qfdj811nboom4112mr8p0na5j11].[avg:lng:qk]' field-type='quantitative' max='14152699.842078594' min='14146650.416935338' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                      <datasource name='Parameters'>
+                        <column alias='500m' name='[매개 변수 2]' value='2.0' />
+                      </datasource>
+                    </currentDeltas>
+                    <capturedDeltas>
+                      <worksheet name='맵'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1qfdj811nboom4112mr8p0na5j11].[avg:lat:qk]' field-type='quantitative' max='4352445.9898243137' min='4346571.6886796094' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1qfdj811nboom4112mr8p0na5j11].[avg:lng:qk]' field-type='quantitative' max='14183676.96058131' min='14177603.405444637' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                      <datasource name='Parameters'>
+                        <column alias='500m' name='[매개 변수 2]' value='2.0' />
+                      </datasource>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point captured-sheet='맵' id='1' />
+                  <story-point captured-sheet='맵' id='3'>
+                    <capturedDeltas>
+                      <worksheet name='맵'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1qfdj811nboom4112mr8p0na5j11].[avg:lat:qk]' field-type='quantitative' max='4386852.5611457471' min='4381328.6772043835' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1qfdj811nboom4112mr8p0na5j11].[avg:lng:qk]' field-type='quantitative' max='14173178.907808971' min='14167467.655889805' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{C4313E39-814F-4C00-A092-A4B3B9C453DA}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='맵'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1qfdj811nboom4112mr8p0na5j11].[none:광역시도 선택구분(복사본)_2230478146645524481:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[매개 변수 2]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{0AC3AD79-20A6-4DFE-AE1F-68CBCEFC4705}' />
+    </window>
+    <window class='worksheet' name='맵-표'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[매개 변수 2]' type='parameter' />
+            <card pane-specification-id='3' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' type='color' />
+            <card pane-specification-id='4' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' type='color' />
+            <card pane-specification-id='5' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{3232EFC2-3E55-4109-BA69-5F872BCBC650}' />
+    </window>
+    <window class='worksheet' name='Top10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='5' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' type='color' />
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+            <card pane-specification-id='4' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' type='color' />
+            <card pane-specification-id='6' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CB8F7E41-62CC-439D-A629-3B10EBA5F6A9}' />
+    </window>
+    <window class='worksheet' name='월별 최대 신고수'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' type='color' />
+            <card pane-specification-id='2' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' type='color' />
+            <card pane-specification-id='1' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CF666BEA-65C2-44AB-B484-AB0142EA9DC6}' />
+    </window>
+    <window class='worksheet' name='월별 최대 신고수 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2230478146651660292:qk:1]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='3' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_1km:qk]' type='color' />
+            <card pane-specification-id='2' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_500m:qk]' type='color' />
+            <card pane-specification-id='1' param='[federated.1qfdj811nboom4112mr8p0na5j11].[sum:events_in_100m:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6345E7B7-B0A4-4C03-86D6-3608318A99C6}' />
+    </window>
+    <window class='worksheet' name='년도별 신고수'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{7DF12A66-9A61-433D-BC2A-DF6BC61C1B9A}' />
+    </window>
+    <window class='dashboard' maximized='true' name='대시보드 1'>
+      <viewpoints>
+        <viewpoint name='Top10'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='년도별 신고수'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='맵'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='월별 최대 신고수'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='52' />
+      <simple-id uuid='{CA05E8A6-8883-4E00-95A1-808EB648F148}' />
+    </window>
+    <window class='worksheet' name='충남'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1qfdj811nboom4112mr8p0na5j11].[none:주소(복사본)_2628624501931945986:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{B79AC532-3EE9-4579-8478-9E0A78FF18DD}' />
+    </window>
+    <window class='worksheet' name='대전'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[매개 변수 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[매개 변수 2]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1qfdj811nboom4112mr8p0na5j11].[usr:Calculation_2628624501935271940:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{8DD76118-E3E8-4115-8887-1887621DB136}' />
+    </window>
+    <window class='worksheet' name='시트 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1qfdj811nboom4112mr8p0na5j11].[none:addr1:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{0721BB06-3DFB-4DFE-895A-AA84CA0C2BAF}' />
+    </window>
+    <window class='worksheet' name='시트 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D0D0F531-CF90-4F9A-8AA2-4230232A199F}' />
+    </window>
+    <window class='dashboard' name='스토리 1'>
+      <viewpoints />
+      <active id='5' />
+      <simple-id uuid='{5F886BB0-8597-4896-BCF0-EA9119430DFC}' />
+    </window>
+  </windows>
+</workbook>
