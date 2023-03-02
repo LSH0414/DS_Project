@@ -1,13 +1,14 @@
 Project/2023_지역_치안_데이터분석/data
 
-
+*.pkl
 *.csv
 *.xlsx
 *.twb
 *.twbr
+*.pickle
+
 
 Project/2023_지역_치안_데이터분석/__pycache__
-
 __pycache__/
 */__pycache__/
 
