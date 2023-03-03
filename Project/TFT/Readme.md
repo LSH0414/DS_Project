@@ -1,11 +1,12 @@
 <h1> 나홀로 프로젝트 - TFT_S8 데이터 분석 </h1>
 
-![IOS badge](https://img.shields.io/badge/python-3.7-blue?style=flat-square&logo=appveyor)  : 
+![IOS badge](https://img.shields.io/badge/python-3.7-blue?style=flat-square&logo=python&logoColor=ffdd54&style=plastic)  : 
 ![IOS badge](https://img.shields.io/badge/-pickle-lightgrey)
 ![IOS badge](https://img.shields.io/badge/-pandas-lightgrey)
 ![IOS badge](https://img.shields.io/badge/-numpy-lightgrey)
 ![IOS badge](https://img.shields.io/badge/-matplotlib-lightgrey)
 ![IOS badge](https://img.shields.io/badge/-plotly-lightgrey)
+
 
 
 <h2> 프로젝트 목적 </h2>
