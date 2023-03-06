@@ -1,5 +1,6 @@
-<h1> 트위치 조축회 데이터 시각화 </h1>
 <h6> 지속적으로 업데이트 중입니다!</h6>
+<h1> 트위치 조축회 데이터 시각화 </h1>
+
 
 ![IOS badge](https://img.shields.io/badge/python-3.7-blue?style=flat-square&logo=python&logoColor=ffdd54&style=plastic)  : 
 ![IOS badge](https://img.shields.io/badge/-pickle-lightgrey)
