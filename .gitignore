@@ -9,6 +9,7 @@ TFT/Untitled.ipynb
 *.csv
 *.xlsx
 *.pickle
+*.twbr
 
 
 __pycache__/
