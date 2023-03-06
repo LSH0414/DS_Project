@@ -1,4 +1,4 @@
-<h1> 나홀로 프로젝트 - TFT_S8 데이터 분석 </h1>
+<h1> 트위치 조축회 데이터 시각화 </h1>
 
 ![IOS badge](https://img.shields.io/badge/python-3.7-blue?style=flat-square&logo=python&logoColor=ffdd54&style=plastic)  : 
 ![IOS badge](https://img.shields.io/badge/-pickle-lightgrey)
@@ -8,7 +8,7 @@
 
 
 <h2> 프로젝트 목적 </h2>
-<h4> : 트위치 조축회 데이터 시각화
+<h4> : 트위치 조축회 멤버들의 매치기록, 이적시장 데이터들을 시각화 하자!!
 
 </br>
 
