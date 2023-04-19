@@ -24,3 +24,8 @@
 <ul>1. <a href = "트위치_조축회_데이터_시각화/">  트위치 조축회 데이터 시각화 </a></ul></br>
 
 </ul>
+
+<ul><h2>Etc</h2>
+<ul>1. <a href = "AutoNewsPush/">  네이버 GPT(챗봇) 뉴스 자동 알람 </a></ul></br>
+
+</ul>
