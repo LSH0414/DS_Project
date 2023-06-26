@@ -3,8 +3,7 @@
 .ipynb_checkpoints
 __pycache__
 
-tmp/
-커뮤니티동향/
-mecab-ko-dic/
+./tmp/
+./커뮤니티동향/
 
 *.csv
