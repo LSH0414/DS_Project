@@ -7,6 +7,7 @@
 <ul>2. <a href = "2023_지역_치안_데이터_분석/">  지역 치안 데이터 분석 </a></ul></br>
 <ul>3. <a href = "TFT/">  TFT_S8 데이터 분석 </a></ul></br>
 <ul>4. <a href = "던전앤파이터/"> 던전앤파이터 상급 던전 입장권 분석 </a></ul></br>
+<ul>5. <a href = "Final_PJT_Team3/"> SNS(Youtube) 기업 채널 분석(CU & GS25) </a></ul></br>
 
 
 
