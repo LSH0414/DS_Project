@@ -7,6 +7,9 @@ TFT/Untitled.ipynb
 
 던전앤파이터/API/
 던전앤파이터/tmp/
+던전앤파이터/__pycache__/
+
+lostark/
 
 *.pkl
 *.csv
