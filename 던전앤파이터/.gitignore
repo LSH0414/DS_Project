@@ -1,5 +1,10 @@
-./커뮤니티동향
-./mecab-ko-dic
+
+
 .ipynb_checkpoints
 __pycache__
-./tmp
+
+tmp/
+커뮤니티동향/
+mecab-ko-dic/
+
+*.csv
