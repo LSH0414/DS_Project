@@ -8,6 +8,7 @@
 <ul>3. <a href = "TFT/">  TFT_S8 데이터 분석 </a></ul></br>
 <ul>4. <a href = "던전앤파이터/"> 던전앤파이터 상급 던전 입장권 분석 </a></ul></br>
 <ul>5. <a href = "Final_PJT_Team3/"> SNS(Youtube) 기업 채널 분석(CU & GS25) </a></ul></br>
+<ul>6. <a href = "TFT_S9/"> TFT_S9 데이터 분석 & 시각화(대시보드 - Streamlit) </a></ul></br>
 
 
 
