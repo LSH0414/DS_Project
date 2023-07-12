@@ -1,4 +1,4 @@
-<h1> 나홀로 프로젝트 - TFT_S8 데이터 분석 </h1>
+<h1> TFT_S9 데이터 분석 & 대시보드 (Streamlit) (수정중) </h1>
 
 ![IOS badge](https://img.shields.io/badge/python-3.7-blue?style=flat-square&logo=python&logoColor=ffdd54&style=plastic)  : 
 ![IOS badge](https://img.shields.io/badge/-pickle-lightgrey)
