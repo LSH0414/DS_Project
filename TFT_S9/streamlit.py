@@ -20,6 +20,8 @@ import data_processing as data_p
 import draw_plots  as draw_p
 import db_connect
 
+traits_list1 = ['공허', '그림자 군도', '녹서스', '다르킨', '데마시아', '방랑자', '슈리마', '아이오니아', '요들', '자운', '타곤', '프렐요드', '필트오버']
+traits_list2 = ['구원자', '기원자', '난동꾼', '도전자', '마법사', '발명의 대가', '백발백중', '불한당', '사수', '여제', '연쇄마법사', '요새', '전쟁기계', '책략가', '학살자']
 # db_connect.getChallengers()
 
 def eng_to_kor(name, col):
@@ -37,6 +39,53 @@ def kor_to_eng_lst(lst):
         result.append(eng_to_kor(name, 'traits'))
     return result
 
+def isLegends(aug):
+    result = True if aug in list(legends_augments.keys()) else False
+    
+    if result:
+        return legends_augments[aug]
+    else:
+        return None
+
+def find_legends_divRow(row):
+    def eng_to_kor_aug(name):
+        for data in tft_dict['augments']:
+            if data['apiName'] == name:
+                return data['name']
+        
+    legends = []
+
+    kor_name = eng_to_kor_aug(row['augment_1'])
+    results = isLegends(kor_name)
+
+    if results != None:
+        for result in results:
+            result = legends_augments['names'][result]
+            legends.append(result)
+        results = None
+
+    kor_name = eng_to_kor_aug(row['augment_2'])
+    results = isLegends(kor_name)
+
+    if results != None:
+        for result in results:
+            result = legends_augments['names'][result]
+            legends.append(result)
+        results = None
+
+    kor_name = eng_to_kor_aug(row['augment_3'])
+    results = isLegends(kor_name)
+
+    if results != None:
+        for result in results:
+            result = legends_augments['names'][result]
+            legends.append(result)
+        results = None
+
+    if len(legends) == 0:
+        return None
+
+    return list(set(legends))
 
 
 style_html = """
@@ -59,7 +108,7 @@ st.set_page_config(
     layout="wide",    
     )
 
-@st.cache_data(show_spinner = '데이터 불러오는 중... 잠시만 기다려주세요.')
+@st.cache_data(show_spinner = ' 사전 데이터 불러오는 중...')
 def data_info_load():
 
     with open('./data/tft_S9_dict.json', 'r') as f:
@@ -77,9 +126,12 @@ def data_info_load():
     with open('./data/puuid_dict.json', 'r') as f:
         puuid_info = json.load(f)
 
-    return tft_dict, img_urls, base_items, trait_imgs, puuid_info
+    with open('./data/tft_S9_legends.json', 'r') as f:
+        legends_augments = json.load(f)
 
-tft_dict, img_urls, base_items, trait_imgs, puuid_info = data_info_load()
+    return tft_dict, img_urls, base_items, trait_imgs, puuid_info, legends_augments
+
+tft_dict, img_urls, base_items, trait_imgs, puuid_info, legends_augments = data_info_load()
 
 reverse_trait_imgs = dict()
 for key1, value1 in trait_imgs.items():
@@ -89,9 +141,10 @@ for key1, value1 in trait_imgs.items():
 
         reverse_trait_imgs[key1] = tmp
 
-@st.cache_data(show_spinner = '데이터 불러오는 중... 잠시만 기다려주세요.')
+@st.cache_data(show_spinner = '게임 데이터 불러오는 중... 잠시만 기다려주세요.')
 def load_data():
     version = 'ver13.13'
+    aug_df = data_p.basic_df('augments')
     df = data_p.augment_line_df('all',version)
     df_all = data_p.augment_line_df('all', 'all')
     df_save_rank = data_p.augment_line_df('save_rank',version).reset_index()
@@ -130,10 +183,13 @@ def load_data():
     # 특성 데이터 로딩
     traits_df = data_p.traits_tier_df()
 
-    return df, df_all, df_save_rank, df_winner, select_augs, unit_df, select_unit, traits_df
+    aug_df['isLegends'] = aug_df.apply(lambda x : find_legends_divRow(x), axis=1)
+    
+
+    return df, df_all, df_save_rank, df_winner, select_augs, unit_df, select_unit, traits_df, aug_df
 
 
-aug_df, aug_all_ver, aug_save_rank, aug_winner, select_augs, unit_df, select_unit, traits_df = load_data()
+aug_df, aug_all_ver, aug_save_rank, aug_winner, select_augs, unit_df, select_unit, traits_df, basic_aug_df = load_data()
 
 
 def trait_imgs_html(lst):
@@ -173,8 +229,8 @@ def streamlit_menu():
     with st.sidebar:
         selected = option_menu(
             menu_title="메인메뉴",  
-            options=["MAIN", "챌린저 - 증강", '챌린저 - 유닛', '챌린저 - 시너지', '커스텀 검색(작업중)'],  
-            icons=['balloon-heart','clipboard-data-fill', 'clipboard-data-fill', 'clipboard-data-fill', 'controller'],
+            options=["MAIN", "챌린저 - 증강", "챌린저 - 전설", '챌린저 - 유닛', '챌린저 - 시너지', '커스텀 검색(작업중)','KHAN'],  
+            icons=['balloon-heart','clipboard-data-fill', 'controller', 'clipboard-data-fill', 'clipboard-data-fill', 'controller','twitch'],
             menu_icon="file-play",
             default_index=0,
             styles={ "icon": {"color": "red", "font-size": "25px"}, 
@@ -193,7 +249,164 @@ if selected == "MAIN":
     TFT를 직접 플레이 하지 않지만 방장의 TFT를 응원하면서 만들어 봤습니다. 피드백은 언제나 환영입니다!
     """
     st.write(ment)
+    
 
+if selected == '챌린저 - 전설':
+
+    div_legend = st.radio('그래프 유형을 선택해주세요.',['전체', '선택' , 'test'])
+    versions = ['전체']
+    patch_versions = unit_df['game_version'].unique()
+    for ver in patch_versions:
+        if ver[:5] not in versions:
+            versions.append(ver[:5])
+    version_type = st.radio('보고 싶은 통계를 선택해주세요. (전체 데이터 선택시 데이터 불러오는데 시간이 약간 소요됩니다.)', versions, horizontal=True)
+
+    if version_type != '전체':
+        legend_df = basic_aug_df[basic_aug_df['game_version'] > version_type]
+    else:
+        legend_df = basic_aug_df.copy()
+
+    if div_legend == '전체':
+
+        def div_legends_row(df):
+            # game_time, isLegends, legend_trait
+            result_lst = []
+            for _, row in df.iterrows():
+                for legend in row['isLegends']:
+                    result_lst.append(pd.DataFrame({
+                        'game_time' : row['game_time'],
+                        'isLegends' : legend
+                    }, index=[0]))
+            return pd.concat(result_lst).reset_index(drop=True)
+        
+        legend_df = legend_df.dropna(subset=['isLegends'])
+        winner_legend = legend_df[legend_df['placement'] == 1]
+        rank_save = legend_df[legend_df['placement'] <= 4]
+
+        legend_df = div_legends_row(legend_df)
+        winner_legend = div_legends_row(winner_legend)
+        rank_save = div_legends_row(rank_save)
+        
+        legend_df = legend_df.groupby(['game_time', 'isLegends']).size().reset_index().set_index('game_time')
+        legend_df = legend_df.rename(columns = {0 : 'cnt'})
+        
+        
+        winner_legend = winner_legend.groupby(['game_time', 'isLegends']).size().reset_index().set_index('game_time')
+        winner_legend = winner_legend.rename(columns = {0 : 'cnt'})
+
+        
+        rank_save = rank_save.groupby(['game_time', 'isLegends']).size().reset_index().set_index('game_time')
+        rank_save = rank_save.rename(columns = {0 : 'cnt'})
+
+        st.plotly_chart(draw_p.legend_trends(legend_df, '1~8등'), use_container_width = True)
+        st.plotly_chart(draw_p.legend_trends(winner_legend, '우승(1등)'), use_container_width = True)
+        st.plotly_chart(draw_p.legend_trends(rank_save, '순방(1~4등)'), use_container_width = True)
+    
+    if div_legend == '선택':
+        legneds_lst = [legend_name for legend_name in legends_augments['names'].values() if legend_name != None]
+        select_legend = st.selectbox('전설을 선택해주세요.', sorted(legneds_lst))
+
+        if '포로' in select_legend:
+            st.write('포로는 고유 증강이 없습니다.')
+        else:
+            target_cnt = dict()
+            
+            
+            # target = basic_aug_df[basic_aug_df['isLegends'] == select_legend]
+
+            def find_legend_trait(row):
+
+                legends = []
+                def eng_to_kor_aug(name):
+                    for data in tft_dict['augments']:
+                        if data['apiName'] == name:
+                            return data['name']
+                    
+                def isLegends(aug):
+                    result = True if aug in list(legends_augments.keys()) else False
+                    
+                    if result:
+                        return aug
+                    else:
+                        return None
+
+                kor_name = eng_to_kor_aug(row['augment_1'])
+                result = isLegends(kor_name)
+
+                if result != None:
+                    legends.append(result)
+                    result = None
+
+                kor_name = eng_to_kor_aug(row['augment_2'])
+                result = isLegends(kor_name)
+
+                if result != None:
+                    legends.append(result)
+                    result = None
+                
+                kor_name = eng_to_kor_aug(row['augment_3'])
+                result = isLegends(kor_name)
+
+                if result != None:
+                    legends.append(result)
+                    result = None
+                
+                return legends
+            
+            def isinRow(row, value):
+                if value in row['isLegends']:
+                    return True
+                else:
+                    return False
+                
+            def div_augs_row(df):
+                # game_time, isLegends, legend_trait
+                result_lst = []
+                for _, row in df.iterrows():
+                    for legend in row['legend_trait']:
+                        result_lst.append(pd.DataFrame({
+                            'game_time' : row['game_time'],
+                            'legend_trait' : legend
+                        }, index=[0]))
+                return pd.concat(result_lst).reset_index(drop=True)
+            
+            target = legend_df.dropna(subset=['isLegends'])
+            winner_legend = target[target['placement'] == 1]
+
+            flag = target.apply(lambda x : isinRow(x, select_legend), axis=1)
+            target = target[flag]
+
+            flag = winner_legend.apply(lambda x : isinRow(x, select_legend), axis=1)
+            winner_legend = winner_legend[flag]
+            
+            target['legend_trait'] = target.apply(lambda x : find_legend_trait(x), axis=1)
+            target = div_augs_row(target)
+
+            winner_legend['legend_trait'] = winner_legend.apply(lambda x : find_legend_trait(x), axis=1)
+            winner_legend = div_augs_row(winner_legend)
+            
+            legend_df = target.groupby(['game_time', 'legend_trait']).size().reset_index().set_index('game_time')
+            legend_df = legend_df.rename(columns = {0 : 'cnt', 'legend_trait' : 'isLegends'})        
+
+            winner_legend = winner_legend.groupby(['game_time', 'legend_trait']).size().reset_index().set_index('game_time')
+            winner_legend = winner_legend.rename(columns = {0 : 'cnt', 'legend_trait' : 'isLegends'})
+
+            def is_target_traits(tarit, target):
+                reverse_dict = {value : key for key, value in legends_augments['names'].items()}
+                if reverse_dict[target] in legends_augments[tarit['isLegends']]:
+                    return True
+                else:
+                    return False
+            
+            target_filter = legend_df.apply(lambda x : is_target_traits(x, select_legend), axis=1)
+            legend_df = legend_df[target_filter]
+
+            target_filter = winner_legend.apply(lambda x : is_target_traits(x, select_legend), axis=1)
+            winner_legend = winner_legend[target_filter]        
+            
+            st.plotly_chart(draw_p.legend_trends(legend_df, '1~8등'), use_container_width = True)
+            st.plotly_chart(draw_p.legend_trends(winner_legend, '우승(1등)'), use_container_width = True)
+    
 
 if selected == '챌린저 - 증강':
     
@@ -512,6 +725,7 @@ if selected == '챌린저 - 시너지':
         
         
         trait_cnt = []
+        main_traits = []
         for game_id in game_ids:
             tmp = target[target['match_id'] == game_id]
 
@@ -522,12 +736,21 @@ if selected == '챌린저 - 시너지':
             sorted(trait)
 
             trait_cnt.append(",".join(trait))
+            main_traits.append(trait[0])
         
         from collections import Counter
         tt = Counter(trait_cnt).most_common(3)
 
         st.write(style_html, unsafe_allow_html=True)
-
+        
+        t_lst = []
+        cnt_lst = []
+        for key, value in Counter(main_traits).items():
+            t_lst.append(key)
+            cnt_lst.append(value)
+        winners = pd.DataFrame({'trait' : t_lst, 'cnt' :cnt_lst})
+        st.write(winners)
+        st.write((winners['cnt'].sum()))
         rec_trait_1,rec_trait_2,rec_trait_3 = st.columns(3)
         trait_col_1,trait_col_2,trait_col_3 = st.columns(3)
 
@@ -913,3 +1136,80 @@ visibility: visible;
 
 
     st.write(txt, unsafe_allow_html=True)
+
+
+def get_s_names():
+    json_path = '/Users/seokholee/lsh/Project/TFT_S9/data/streamer/puuids.json'
+    with open(json_path, 'r') as f:
+        s_puuids = json.load(f)
+    
+    s_names = list(s_puuids.keys())
+    return s_names
+
+def dsk_data(s_name):    
+
+    path = '/Users/seokholee/lsh/Project/TFT_S9/data/streamer/'
+    df_games = pd.read_csv(path + f'df_games_{s_name}.csv')
+    df_traits = pd.read_csv(path + f'df_traits_{s_name}.csv')
+    df_units = pd.read_csv(path + f'df_units_{s_name}.csv')
+
+    return df_games, df_traits, df_units
+
+
+
+if selected =='KHAN':
+    s_names = get_s_names()
+    
+    s_name = st.radio('스트리머를 선택해주세요.', s_names, horizontal=True)
+    dsk_games, dsk_traits, dsk_units = dsk_data(s_name)
+
+    def change_time(t):
+
+        m = int(t//60)
+        s = int(t%60)
+        result = str(m) + '분 ' + str(s) + '초'
+        return result
+
+    dsk_games['game_datetime'] = pd.to_datetime(dsk_games['game_datetime'].apply(data_p.unix_to_local))    
+    dsk_games['죽은시간'] = dsk_games['time_eliminated'].apply(change_time)
+
+    st.write(s_name + ' DATA!!')
+    st.write(dsk_games['placement'].value_counts())
+    st.write(dsk_games['placement'].value_counts().sum())
+    draw_df = pd.DataFrame(dsk_games['placement'].value_counts())
+    st.plotly_chart(draw_p.streamer_chart(draw_df))
+
+    dsk_traits['name'] = dsk_traits.apply(lambda x : eng_to_kor(x['name'], 'traits'), axis=1)
+    # st.dataframe(dsk_traits)
+    s_traits = dsk_traits[dsk_traits['style']>=3].groupby('name').size().reset_index()
+    s_traits1 = s_traits[s_traits['name'].isin(traits_list1)]
+    s_traits2 = s_traits[s_traits['name'].isin(traits_list2)]
+    s_traits1.set_index('name', inplace=True)
+    s_traits2.set_index('name', inplace=True)
+    
+    s_traits1.rename(columns = {0 : 'cnt'}, inplace=True)
+    s_traits2.rename(columns = {0 : 'cnt'}, inplace=True)
+    
+    st.plotly_chart(draw_p.streamer_chart_traits(s_traits1.sort_values('cnt', ascending=False)), use_container_width = True)
+    st.plotly_chart(draw_p.streamer_chart_traits(s_traits2.sort_values('cnt', ascending=False)), use_container_width = True)
+
+    dsk_units['character_id'] = dsk_units.apply(lambda x : eng_to_kor(x['character_id'], 'units'), axis=1)
+    st.dataframe(dsk_units)
+
+    items = []
+    for _, row in dsk_units.iterrows():
+        if row['item_1']:
+            items.append(row['item_1'])
+        if row['item_2']:
+            items.append(row['item_2'])
+        if row['item_3']:
+            items.append(row['item_3'])
+
+    item_df = pd.DataFrame({'name' : items}).dropna(subset=['name']).groupby('name').size().reset_index()
+    item_df['name'] = item_df.apply(lambda x : eng_to_kor(x['name'], 'items'), axis=1)    
+    item_df.set_index('name', inplace=True)
+    st.dataframe(item_df)
+    st.dataframe(dsk_units.groupby('character_id').size())
+
+
+

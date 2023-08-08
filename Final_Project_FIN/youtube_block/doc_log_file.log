@@ -1,0 +1,16 @@
+여기1
+여기2
+['예의']
+SELECT * FROM tb_comment WHERE video_id in (select id from tb_video where channel_id = 'UCQC4XBSZAJD3pitxW1K3TVA' ) and content LIKE '%예의%' ;
+UgwAtxE975qRP4-H-S14AaABAg
+UgwAtxE975qRP4-H-S14AaABAg moderated succesfully
+UgwAtxE975qRP4-H-S14AaABAg set_moderation_status 완료
+UgxTxG29_M20OGe28Dh4AaABAg
+UgxTxG29_M20OGe28Dh4AaABAg moderated succesfully
+UgxTxG29_M20OGe28Dh4AaABAg set_moderation_status 완료
+Ugype7xQAEjwdRPgQdZ4AaABAg
+Ugype7xQAEjwdRPgQdZ4AaABAg moderated succesfully
+Ugype7xQAEjwdRPgQdZ4AaABAg set_moderation_status 완료
+UgzmVUcYt9OohDoHxYd4AaABAg
+UgzmVUcYt9OohDoHxYd4AaABAg moderated succesfully
+UgzmVUcYt9OohDoHxYd4AaABAg set_moderation_status 완료

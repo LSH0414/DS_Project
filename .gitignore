@@ -26,3 +26,11 @@ __pycache__/
 
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
+
+TFT_S9/data/
+TFT_S9/img/
+api_keys.txt
+*.jar
+TFT_S9/*.ipynb
+TFT_S9/challenger_games_API.py
+TFT_S9/db_connect.py

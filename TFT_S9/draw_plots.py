@@ -211,3 +211,62 @@ def draw_trend_df(df):
         ))
     fig.update_layout(hovermode="x")
     return fig
+
+def legend_trends(df, title, mode = 'markers+lines'):
+
+    # fig = make_subplots(specs=[[{"secondary_y": True}]])
+    fig = go.Figure()
+
+    draw_cols = sorted(list(df['isLegends'].unique()))
+
+    colors = px.colors.qualitative.Plotly + px.colors.qualitative.D3
+    
+    for idx, value in enumerate(draw_cols):
+        target = df[df['isLegends'] == value].resample('1D').sum()
+        fig.add_trace(go.Scatter(
+            x = target.index,
+            y = target['cnt'],
+            mode = mode,
+            marker=dict(
+                color=colors[idx]),
+            name =  value,
+        ))
+    fig.update_layout(
+        title=dict(text= title, font=dict(size=20), automargin=True, yref='paper')
+    )
+    fig.update_layout(hovermode="x")
+
+    return fig
+
+
+def streamer_chart(df):
+    fig = go.Figure()
+
+    fig.add_trace(go.Bar(
+        x = df.index,
+        y = df['placement'],
+        text = df['placement'],
+        textposition='auto',
+        textfont_color="white",
+
+    ))
+
+    fig.update_traces(marker_color='gray')
+
+    return fig
+
+def streamer_chart_traits(df):
+    fig = go.Figure()
+
+    fig.add_trace(go.Bar(
+        x = df.index,
+        y = df['cnt'],
+        text = df['cnt'],
+        textposition='auto',
+        textfont_color="white",
+
+    ))
+
+    fig.update_traces(marker_color='gray')
+
+    return fig

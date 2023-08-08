@@ -51,6 +51,16 @@ def div_aug(df):
 
     return result
 
+def basic_df(target):
+    df = pd.DataFrame()
+    for csv_path in get_csv_data(target, version='all'):
+        tmp = pd.read_csv(csv_path)
+        df = pd.concat([df, tmp])
+    df = df.drop_duplicates(subset=['match_id','placement'])
+    df['game_time'] = pd.to_datetime(df['game_time'].apply(unix_to_local))    
+
+    return df
+
 
 def augment_line_df(div_flag, version):
 
