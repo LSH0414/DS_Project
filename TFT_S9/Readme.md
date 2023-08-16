@@ -2,7 +2,7 @@
 
 ![IOS badge](https://img.shields.io/badge/python-3.7-blue?style=flat-square&logo=python&logoColor=ffdd54&style=plastic)  : 
 ![IOS badge](https://img.shields.io/badge/-streamlit-lightgrey)
-![IOS badge](https://img.shields.io/badge/-pickle-lightgrey)
+![IOS badge](https://img.shields.io/badge/-pyspark-lightgrey)
 ![IOS badge](https://img.shields.io/badge/-pandas-lightgrey)
 ![IOS badge](https://img.shields.io/badge/-numpy-lightgrey)
 ![IOS badge](https://img.shields.io/badge/-matplotlib-lightgrey)
