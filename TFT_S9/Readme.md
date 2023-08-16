@@ -96,7 +96,7 @@
 
   ---
     
-   <ul> <h5> 커스텀 검색(미완성) </h5>
+   <ul> <h3> 커스텀 검색(미완성) </h3>
      <img src = 'https://github.com/LSH0414/Project/assets/119479455/68bc3107-c17f-435d-9cda-4ef1b06d414b'>
    </ul>
     </br></br> <h4> 원하는 커스텀 검색 탭입니다.  </h4>
