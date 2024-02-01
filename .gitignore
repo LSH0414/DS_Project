@@ -51,3 +51,13 @@ TFT_S9/db_connect.py
 
 /국민대_데이터분석
 /유통데이터 활용 경진대회
+
+/기상예측
+/제주특산물가격예측
+/일상대화데이터
+
+/DnF/data/data crawl
+
+/pyspark.ipynb
+/S3_test.ipynb
+/stopwrods.txt
