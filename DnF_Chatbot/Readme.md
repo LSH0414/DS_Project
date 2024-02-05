@@ -58,7 +58,7 @@ prompt = """다음 요구사항에 맞는 답변을 생성해주세요.
 
 </br></br>
 
-##  Train DnF Chatbot with PPO
+##  Result
 - 베이스 모델 : [polyglot-1.3b](https://github.com/EleutherAI/polyglot)
   - 12.8b로 가장 큰 모델을 선택할 경우 QLoRA를 사용한 SFT는 가능하지만 PPO의 inference 과정에서 MMO문제가 발생합니다. 환경에 맞추어 베이스 모델을 수정하시면됩니다.
 
