@@ -1,4 +1,4 @@
-# Dungeon & Figher Chatbot(RLHF) 프로젝트(수정중)
+# Dungeon & Figher Chatbot(RLHF) 프로젝트
 
 ChatGPT와 LLM을 fine-tuning을 통해 나만의 모델을 만들어보자!
 
