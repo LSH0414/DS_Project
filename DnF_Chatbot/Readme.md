@@ -6,19 +6,57 @@ ChatGPT를 통해 데이터셋을 구축하고 강화학습(PPO), RLHF, QLoRA를
   - sLLM 모델을 QLoRA를 사용하여 Colab환경에서 프로젝트를 진행하였습니다.</br>
   - 실습환경: Jupyter or Colab, 선수 지식: 파이썬
 
-### PPO
-프로젝트는 PPO알고리즘을 활용하여 다음과 같은 흐름으로 훈련이 진행되었습니다.
-- Trainable Model : Supervised fine-tuning polyglot-1.3b
-- Freeze Model : Supervised fine-tuning polyglot-1.3b
+</br>
+
+
+### Train PPO
+프로젝트는 PPO알고리즘을 활용하여 다음과 같은 흐름으로 훈련이 진행되었습니다. PPO과정에 대한 요약은 아래 흐름도를 통해 이해할 수 있고 각 모델은 다음과 같습니다.
+- Trained Model : Supervised fine-tuning polyglot-1.3b (Trainable)
+- Frozen Model : Supervised fine-tuning polyglot-1.3b
 - Reward Model : TextClassfication 1-label fine-tuning polyglot-1.3b
 
 ![image](https://github.com/LSH0414/Project/assets/119479455/e2034621-1d2e-4130-9255-7004a21eebb0)
 
 
-####  DnF Chatbot 실습 Requirement
+</br></br>
+
+## Make Data Prompt
+- 데이터 : [SFT&RM Train Data](https://github.com/LSH0414/Project/tree/master/DnF_Chatbot/data)
+- RM Data 구축을 위한 PROMPT는 다음과 같습니다. 해당 PROMPT를 ChatGPT에 전달하였고 답변을 위한 모델로 'gpt-3.5-turbo'을 사용하였고 본문의 입력길이가 길어 명령을 전달하지 못할 경우 입력 시퀀스의 길이가 증가한 'gpt-4-1106-preview'모델을 사용하여 답변을 제작하였습니다. 실제로 두 모델이 만들어내는 답변을 20번 받았을때 큰 차이가 존재한다고 보기 어려웠습니다. 
+```python
+prompt = """다음 요구사항에 맞는 답변을 생성해주세요.
+요구 사항은 다음과 같습니다:
+1. 본문에 대한 내용을 요약하는 작업을 진행합니다.
+2. 답변은 한국어로 작성해야 합니다.
+3. 답변은 하나의 질문과 장문, 중문, 단문 응답으로 총 네 가지 모두 작성해야 합니다.
+4. 장문, 중문, 단문은 같은 질문에 대한 답변으로 작성해야 합니다.
+5. 장문은 5문장 이상으로 구성해야 합니다.
+6. 중문은 3문장 이하로 구성해야 합니다.
+7. 단문은 1문장으로 구성해야 합니다.
+8. 장문, 중문, 단문은 내용에 겹치는 부분이 있어도 됩니다.
+
+
+아래의 본문에 대한 내용을 바탕으로 답변을 작성해주세요.
+질문과 응답은 아래와 같은 형식으로 입력에 알맞게 작성하세요.
+
+질문과 각 응답 사이는 ###으로 구분해주세요.
+질문 : ###
+장문 : ###
+중문 : ###
+단문 :
+
+
+본문 : 다음 내용은 {subject}에 관한 내용입니다.\n{content}
+
+"""
+```
+
+</br></br>
+
+##  Train DnF Chatbot with PPO
 - 베이스 모델 : [polyglot-1.3b](https://github.com/EleutherAI/polyglot)
   - 12.8b로 가장 큰 모델을 선택할 경우 QLoRA를 사용한 SFT는 가능하지만 PPO의 inference 과정에서 MMO문제가 발생합니다. 환경에 맞추어 베이스 모델을 수정하시면됩니다.
-- 데이터 : [data_kochatgpt](https://github.com/LSH0414/Project/tree/master/DnF_Chatbot/data)
+
 - 필요 모듈
 ```bash
 pip install -q -U bitsandbytes
