@@ -4,6 +4,7 @@ ChatGPT와 LLM을 fine-tuning을 통해 나만의 모델을 만들어보자!
 
 ChatGPT를 통해 데이터셋을 구축하고 강화학습(PPO), RLHF, QLoRA를 사용하여 특정 분야(던전앤파이터 세계관)에 대한 질문에 잘 대답할 수 있는 모델을 만드는 프로젝트입니다.</br>
   - sLLM 모델을 QLoRA를 사용하여 Colab환경에서 프로젝트를 진행하였습니다.</br>
+  - 던전앤파이터와 관련된 데이터는 약 3,500개의 이야기 데이터를 사용하였습니다. 던전앤파이터의 모든 세계관을 표현하기에는 적은 데이터이고 하나의 주제에 대해서도 모델이 이해하기 적은 데이터로 보다 정교한 대답을 위해서 더 많은 데이터가 필요합니다.
   - 실습환경: Jupyter or Colab, 선수 지식: 파이썬
 
 </br>
@@ -21,7 +22,11 @@ ChatGPT를 통해 데이터셋을 구축하고 강화학습(PPO), RLHF, QLoRA를
 </br></br>
 
 ## Make Data Prompt
-- 데이터 : [SFT&RM Train Data](https://github.com/LSH0414/Project/tree/master/DnF_Chatbot/data)
+- 데이터 출저
+  - [루리웹 던전앤파이터 스토리 요약](https://bbs.ruliweb.com/news/board/17/read/61)
+  - [DFU (던전앤파이터 공식 홈페이지)](https://www.dnf-universe.com/)
+  - [던전앤파이터 나무위키(메인스토리)](https://namu.wiki/w/%EB%8D%98%EC%A0%84%EC%95%A4%ED%8C%8C%EC%9D%B4%ED%84%B0)
+- 훈련 데이터 : [SFT&RM Train Data](https://github.com/LSH0414/Project/tree/master/DnF_Chatbot/data)
 - RM Data 구축을 위한 PROMPT는 다음과 같습니다. 해당 PROMPT를 ChatGPT에 전달하였고 답변을 위한 모델로 'gpt-3.5-turbo'을 사용하였고 본문의 입력길이가 길어 명령을 전달하지 못할 경우 입력 시퀀스의 길이가 증가한 'gpt-4-1106-preview'모델을 사용하여 답변을 제작하였습니다. 실제로 두 모델이 만들어내는 답변을 20번 받았을때 큰 차이가 존재한다고 보기 어려웠습니다. 
 ```python
 prompt = """다음 요구사항에 맞는 답변을 생성해주세요.
@@ -86,5 +91,3 @@ Response (before) :   '머크 우드'는 마계를 상징하는 지역 중 하�
 Response (after) :   '머크 우드'는 노스피스의 북쪽으로, 황량한 사막과 끝없이 펼쳐진 바다가 끝없이 펼쳐지는 곳입니다. 이곳은 모험가들의 성지이며, 신비한 고대 마법진들이 존재하는 곳입니다." 머크우드에는 오래된 마법진이 있는데, 그곳에 들어가면 다양한 마법진을 만나볼 수 있습니다."라고 '머크위드'에 대한 자세한 정보가 제공됩니다. 머크우드는 오래된 고대 마법진이 존재하는 장소로 알려져 있습니다.
 Rewards (before)/(after) :  tensor([3.6680]) / tensor([1.8340])
 ```
-
-던전앤파이터 세계관을 이해시키기에는 훈련 데이터가 많지 않았습니다. 
