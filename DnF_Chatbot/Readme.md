@@ -1,6 +1,6 @@
 # Dungeon & Figher Chatbot(RLHF) 프로젝트
 
-ChatGPT와 LLM을 fine-tuning을 통해 나만의 모델을 만들어보자!
+ChatGPT와 sLLM을 fine-tuning을 통해 나만의 모델을 만들어보자!
 
 ChatGPT를 통해 데이터셋을 구축하고 강화학습(PPO), RLHF, QLoRA를 사용하여 특정 분야(던전앤파이터 세계관)에 대한 질문에 잘 대답할 수 있는 모델을 만드는 프로젝트입니다.</br>
   - sLLM 모델을 QLoRA를 사용하여 Colab환경에서 프로젝트를 진행하였습니다.</br>
