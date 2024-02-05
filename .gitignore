@@ -17,6 +17,7 @@ lostark/
 *.pickle
 *.twbr
 *.png
+*.mp4
 
 __pycache__/
 */__pycache__/
@@ -61,3 +62,4 @@ TFT_S9/db_connect.py
 /pyspark.ipynb
 /S3_test.ipynb
 /stopwrods.txt
+
