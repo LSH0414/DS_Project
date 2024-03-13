@@ -15,10 +15,11 @@
 
 </ul>
 
-<ul><h2> M/L </h2>
+<ul><h2> M/L, D/L </h2>
 <ul>1. <a href = "최동원_연봉_예측/"> 최동원 선수 연봉 예측 </a></ul></br>
 <ul>2. <a href = "리그오브레전드_승부_예측/">  리그 오브 레전드 승패 예측 </a></ul></br>
 <ul>3. <a href = "문장_유형_분류_예측/">  문장 유형 분석 </a></ul></br>
+<ul>4. <a href = "DnF_Chatbot/">  던전앤파이터 Chatbot </a></ul></br>
 
 </ul>
 
