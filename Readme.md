@@ -31,6 +31,6 @@
 </ul>
 
 <ul><h2>Etc</h2>
-<ul>1. <a href = "AutoNewsPush/">  네이버 GPT(챗봇) 뉴스 자동 알람 </a></ul></br>
+<ul>1. <a href = "AutoNewsPush/">  네이버 뉴스 자동 알람 </a></ul></br>
 
 </ul>
