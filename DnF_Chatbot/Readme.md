@@ -1,4 +1,12 @@
-# Dungeon & Figher Chatbot(RLHF) 프로젝트
+# Dungeon & Figher Chatbot 프로젝트
+
+
+
+**24.04.20 Update**
+기존에 polyglot1.3b 모델에 RLHF - PPO 학습된 모델을 통해 RAG를 구현하기 어려워 EEVE10.8b모델에 SFT를 진행하였습니다. RAG로 활용되는 데이터는 던전앤파이터 공식 홈페이지 커퓨니티의 공식 공략글과 던전앤파이터 관련 나무위키 페이지들을 사용하였습니다.
+임베딩 모델은 BAAI/bge-m3 모델을 사용하였고, 던전앤파이터 데이터를 통해 추가적으로 학습할 예정입니다.
+
+
 
 ChatGPT와 sLLM을 fine-tuning을 통해 나만의 모델을 만들어보자!
 
@@ -8,7 +16,6 @@ ChatGPT를 통해 데이터셋을 구축하고 강화학습(PPO), RLHF, [QLoRA](
   - 실습환경: Jupyter or Colab, 선수 지식: 파이썬
 
 </br>
-
 
 ### Train PPO
 프로젝트는 PPO알고리즘을 활용하여 다음과 같은 흐름으로 훈련이 진행되었습니다. PPO과정에 대한 요약은 아래 흐름도를 통해 이해할 수 있고 각 모델은 다음과 같습니다.
