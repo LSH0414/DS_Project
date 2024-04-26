@@ -1,16 +1,28 @@
 # Dungeon & Figher Chatbot 프로젝트
 
 
-
 <h3> 24.04.20 Update</h3>
-기존에 polyglot1.3b 모델에 RLHF - PPO 학습된 모델을 통해 RAG를 구현하기 어려워 EEVE-10.8b모델에 SFT를 진행하였습니다. RAG로 활용되는 데이터는 던전앤파이터 공식 홈페이지 커퓨니티의 공식 공략글과 던전앤파이터 관련 나무위키 페이지들을 사용하였습니다. 해당 데이터는 임베딩에 학습하지 않았지만 데이터를 구축하여 추가적으로 학습할 예정입니다.
 
+기존에 polyglot1.3b 모델에 RLHF - PPO 학습된 모델을 통해 RAG를 구현하기 어려워, QA데이터를 기반으로 EEVE-10.8b모델에 SFT를 진행하였습니다.
+
+RAG로 활용되는 데이터는 아래 두 페이지에 있는 글을 수집하여 진행하였습니다.
+- [던전앤파이터 공식 홈페이지 커뮤니티 공략글](https://df.nexon.com/community/dnfboard/article/2760672?category=0)
+- [던전앤파이터 나무위키](https://namu.wiki/w/던전앤파이터)
+
+수집한 데이터를 통해 추가적으로 임베딩에 대한 학습 역시 진행예정입니다.
 
 <h4>RAG Options</h4>
-- Chunk : 3,000</br>
-- Embedding Model : BAAI/bge-m3
 
-
+<ul>
+  - Chunk : 3,000<br/>
+  - Overlap : 250<br/>
+  - Embedding Model : BAAI/bge-m3<br/>
+  - Data</br>
+  <ul>
+  - 공식 홈페이지 글 : 156개</br>
+  - 나무위키 페이지 : 679개
+    </ul>
+</ul>
 
 
 https://github.com/LSH0414/Project/assets/119479455/8cff1b25-b580-43a2-a714-f676ab7523f0
@@ -20,6 +32,10 @@ https://github.com/LSH0414/Project/assets/119479455/8cff1b25-b580-43a2-a714-f676
 
 
 ----
+**하기 내용은 polyglot1.3b를 학습시킨 모델로 RAG에 대응하지 못하는 모델입니다.**
+
+
+
 ChatGPT와 sLLM을 fine-tuning을 통해 나만의 모델을 만들어보자!
 
 ChatGPT를 통해 데이터셋을 구축하고 강화학습(PPO), RLHF, [QLoRA](https://github.com/artidoro/qlora?tab=readme-ov-file)를 사용하여 특정 분야(던전앤파이터 세계관)에 대한 질문에 잘 대답할 수 있는 모델을 만드는 프로젝트입니다.</br>
