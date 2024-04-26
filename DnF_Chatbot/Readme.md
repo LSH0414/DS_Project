@@ -32,7 +32,9 @@ https://github.com/LSH0414/Project/assets/119479455/8cff1b25-b580-43a2-a714-f676
 
 
 ----
-**하기 내용은 polyglot1.3b를 학습시킨 모델로 RAG에 대응하지 못하는 모델입니다.**
+----
+----
+<h3>하기 내용은 polyglot1.3b를 학습시킨 모델로 RAG에 대응하지 못하는 모델입니다.</h3>
 
 
 
